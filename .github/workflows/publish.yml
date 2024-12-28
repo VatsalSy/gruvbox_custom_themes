@@ -1,0 +1,35 @@
+name: Publish Extension
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Triggers on version tags, e.g., v1.2.3
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install vsce and ovsx
+        run: |
+          npm install -g @vscode/vsce
+          npm install -g ovsx
+
+      - name: Package extension
+        run: vsce package
+
+      - name: Publish to Visual Studio Marketplace
+        run: vsce publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}
+
+      - name: Publish to Open VSX Registry
+        run: ovsx publish -p ${{ secrets.OPEN_VSX_TOKEN }}
