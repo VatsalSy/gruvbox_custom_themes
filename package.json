@@ -1,6 +1,6 @@
 {
   "name": "vatsal-themes",
-  "publisher": "vatsal",
+  "publisher": "vatsalsy",
   "displayName": "Vatsal Theme Collection",
   "description": "A collection of high-contrast themes based on Gruvbox with clear foregrounds",
   "version": "0.0.1",
@@ -43,14 +43,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/vatsal-themes"
+    "url": "https://github.com/VatsalSy/vscode_custom_themes"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/vatsal-themes/issues"
+    "url": "https://github.com/VatsalSy/vscode_custom_themes/issues"
   },
   "author": {
     "name": "Vatsal"
   },
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/vatsal-themes#readme"
+  "homepage": "https://github.com/VatsalSy/vscode_custom_themes#readme"
 }
