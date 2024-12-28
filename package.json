@@ -2,7 +2,7 @@
   "name": "vatsal-themes",
   "publisher": "vatsal",
   "displayName": "Vatsal Theme Collection",
-  "description": "A collection of high-contrast themes for vscode forks.",
+  "description": "A collection of high-contrast themes based on Gruvbox with clear foregrounds",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.50.0"
@@ -10,34 +10,35 @@
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "theme",
+    "gruvbox",
+    "dark theme",
+    "high contrast"
+  ],
+  "galleryBanner": {
+    "color": "#1d2021",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
-        "label": "Vatsal Gruvbox Dark Hard",
+        "label": "Vatsal Gruvbox Dark (High Contrast)",
         "uiTheme": "vs-dark",
         "path": "./themes/custom_gruvbox_dark-color-theme.json"
-      },
-      {
-        "label": "Vatsal Gruvbox Dark Medium",
-        "uiTheme": "vs-dark",
-        "path": "./themes/custom_gruvbox_dark_medium-color-theme.json"
-      },
-      {
-        "label": "Vatsal Gruvbox Dark Soft",
-        "uiTheme": "vs-dark",
-        "path": "./themes/custom_gruvbox_dark_soft-color-theme.json"
       }
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vatsalsy/vscode_custom_themes"
+    "url": "https://github.com/yourusername/vatsal-themes"
   },
-  "keywords": [
-    "theme",
-    "dark theme",
-    "gruvbox",
-    "color-theme"
-  ],
-  "license": "MIT"
+  "bugs": {
+    "url": "https://github.com/yourusername/vatsal-themes/issues"
+  },
+  "author": {
+    "name": "Vatsal"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/vatsal-themes#readme"
 }
