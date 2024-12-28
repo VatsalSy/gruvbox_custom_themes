@@ -43,12 +43,23 @@ jobs:
             npm version $VERSION --no-git-tag-version
           fi
 
-      - name: Check and publish to VS Marketplace
+      - name: Check if version exists and publish to VS Marketplace
         id: vs_marketplace
         continue-on-error: true
         env:
           VSCE_TOKEN: ${{ secrets.VS_MARKETPLACE_TOKEN }}
-        run: npx @vscode/vsce publish -p $VSCE_TOKEN
+        run: |
+          # Get current version
+          VERSION=$(node -p "require('./package.json').version")
+          
+          # Try to view the extension info
+          if ! npx @vscode/vsce show vatsalsy.gruvbox-crisp-tex $VERSION 2>/dev/null; then
+            echo "Version $VERSION does not exist. Publishing..."
+            npx @vscode/vsce publish -p $VSCE_TOKEN
+          else
+            echo "Version $VERSION already exists. Skipping publish."
+            exit 0
+          fi
 
       - name: Create Open VSX namespace and publish
         if: steps.vs_marketplace.outcome == 'success'
