@@ -9,7 +9,82 @@ on:
     types: [published]
 
 jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
+      should_publish: ${{ steps.check_versions.outputs.should_publish }}
+      vs_exists: ${{ steps.check_versions.outputs.vs_exists }}
+      ovsx_exists: ${{ steps.check_versions.outputs.ovsx_exists }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for all tags and branches
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install vsce and ovsx
+        run: npm install -g @vscode/vsce ovsx
+
+      - name: Get version
+        id: get_version
+        run: |
+          # Get the latest git tag
+          VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
+          VERSION=${VERSION#v}  # Remove 'v' prefix
+          
+          # Validate version format
+          if ! [[ $VERSION =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Invalid version format: $VERSION. Expected format: x.y.z"
+            exit 1
+          fi
+          
+          echo "VERSION=$VERSION"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Check existing versions
+        id: check_versions
+        env:
+          VERSION: ${{ steps.get_version.outputs.version }}
+        run: |
+          VS_EXISTS="false"
+          OVSX_EXISTS="false"
+          
+          echo "Checking version $VERSION on VS Marketplace..."
+          if npx @vscode/vsce show vatsalsy.gruvbox-crisp-tex $VERSION 2>/dev/null; then
+            VS_EXISTS="true"
+            echo "::notice::Version $VERSION already exists on VS Marketplace"
+          else
+            echo "Version $VERSION does not exist on VS Marketplace"
+          fi
+
+          echo "Checking version $VERSION on Open VSX Registry..."
+          if npx ovsx get vatsalsy.gruvbox-crisp-tex $VERSION 2>/dev/null; then
+            OVSX_EXISTS="true"
+            echo "::notice::Version $VERSION already exists on Open VSX Registry"
+          else
+            echo "Version $VERSION does not exist on Open VSX Registry"
+          fi
+
+          echo "vs_exists=$VS_EXISTS" >> $GITHUB_OUTPUT
+          echo "ovsx_exists=$OVSX_EXISTS" >> $GITHUB_OUTPUT
+          
+          if [ "$VS_EXISTS" = "true" ] && [ "$OVSX_EXISTS" = "true" ]; then
+            echo "should_publish=false" >> $GITHUB_OUTPUT
+            echo "::notice::Version $VERSION exists in both marketplaces, skipping publish"
+          else
+            echo "should_publish=true" >> $GITHUB_OUTPUT
+            echo "Publishing needed for at least one marketplace"
+          fi
+
   publish:
+    needs: check-version
+    if: needs.check-version.outputs.should_publish == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -19,72 +94,48 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Update version
         run: |
-          # Get the latest git tag
-          VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
-          VERSION=${VERSION#v}  # Remove 'v' prefix
-          
-          # Read current version from package.json
-          CURRENT_VERSION=$(node -p "require('./package.json').version")
-          
-          # If versions are different, update package.json
-          if [ "$VERSION" != "$CURRENT_VERSION" ]; then
-            npm version $VERSION --no-git-tag-version
-          fi
+          npm ci  # Use ci instead of install for more reliable builds
+          npm install -g @vscode/vsce ovsx
 
-      - name: Check if version exists and publish to VS Marketplace
-        id: vs_marketplace
-        continue-on-error: true
+      - name: Package extension
+        run: npx @vscode/vsce package
+
+      - name: Publish to VS Marketplace
+        if: needs.check-version.outputs.vs_exists != 'true'
         env:
           VSCE_TOKEN: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+          VERSION: ${{ needs.check-version.outputs.version }}
         run: |
-          # Get current version
-          VERSION=$(node -p "require('./package.json').version")
-          
-          # Try to view the extension info
-          if ! npx @vscode/vsce show vatsalsy.gruvbox-crisp-tex $VERSION 2>/dev/null; then
-            echo "Version $VERSION does not exist. Publishing..."
-            npx @vscode/vsce publish -p $VSCE_TOKEN
-          else
-            echo "Version $VERSION already exists. Skipping publish."
-            exit 0
-          fi
+          echo "Publishing version $VERSION to VS Marketplace..."
+          npx @vscode/vsce publish -p $VSCE_TOKEN || {
+            echo "::error::Failed to publish to VS Marketplace"
+            exit 1
+          }
+          echo "::notice::Successfully published to VS Marketplace"
 
-      - name: Check if version exists and publish to Open VSX Registry
-        id: open_vsx
-        continue-on-error: true
+      - name: Publish to Open VSX Registry
+        if: needs.check-version.outputs.ovsx_exists != 'true'
         env:
           OVSX_TOKEN: ${{ secrets.OPEN_VSX_TOKEN }}
+          VERSION: ${{ needs.check-version.outputs.version }}
         run: |
-          # Get current version
-          VERSION=$(node -p "require('./package.json').version")
-          
-          # Try to view the extension info
-          if ! npx ovsx get vatsalsy.gruvbox-crisp-tex $VERSION 2>/dev/null; then
-            echo "Version $VERSION does not exist on Open VSX. Publishing..."
-            npx ovsx publish -p $OVSX_TOKEN
-          else
-            echo "Version $VERSION already exists on Open VSX. Skipping publish."
-            exit 0
-          fi
-
-      - name: Create Open VSX namespace and publish
-        if: steps.vs_marketplace.outcome == 'success'
-        env:
-          OVSX_TOKEN: ${{ secrets.OPEN_VSX_TOKEN }}
-        run: |
-          # Try to create namespace (it's ok if it already exists)
+          echo "Creating namespace on Open VSX (if needed)..."
           npx ovsx create-namespace vatsalsy -p $OVSX_TOKEN || true
-          # Publish to Open VSX
-          npx ovsx publish -p $OVSX_TOKEN
+          
+          echo "Publishing version $VERSION to Open VSX Registry..."
+          npx ovsx publish -p $OVSX_TOKEN || {
+            echo "::error::Failed to publish to Open VSX Registry"
+            exit 1
+          }
+          echo "::notice::Successfully published to Open VSX Registry"
+
+      - name: Publish Summary
+        run: |
+          echo "### Publishing Summary" >> $GITHUB_STEP_SUMMARY
+          echo "Version: ${{ needs.check-version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+          echo "- VS Marketplace: ${{ needs.check-version.outputs.vs_exists == 'true' && 'Already exists' || 'Published' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Open VSX Registry: ${{ needs.check-version.outputs.ovsx_exists == 'true' && 'Already exists' || 'Published' }}" >> $GITHUB_STEP_SUMMARY
