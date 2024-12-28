@@ -1,5 +1,12 @@
 # Gruvbox Crisp Color Theme (with TeX)
 
+[![Version](https://img.shields.io/visual-studio-marketplace/v/vatsal.gruvbox-crisp-tex)](https://marketplace.visualstudio.com/items?itemName=vatsal.gruvbox-crisp-tex)
+[![Downloads](https://img.shields.io/visual-studio-marketplace/d/vatsal.gruvbox-crisp-tex)](https://marketplace.visualstudio.com/items?itemName=vatsal.gruvbox-crisp-tex)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/vatsal.gruvbox-crisp-tex)](https://marketplace.visualstudio.com/items?itemName=vatsal.gruvbox-crisp-tex)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vatsal/gruvbox_custom_themes/publish.yml?label=publish)](https://github.com/vatsal/gruvbox_custom_themes/actions)
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/vatsal/gruvbox-crisp-tex)](https://open-vsx.org/extension/vatsal/gruvbox-crisp-tex)
+[![License](https://img.shields.io/github/license/vatsal/gruvbox_custom_themes)](LICENSE)
+
 A collection of high-contrast VSCode themes based on the Gruvbox color scheme, optimized for clarity, readability, and enhanced LaTeX support.
 
 ## Acknowledgment
@@ -26,10 +33,20 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 
 ## Installation
 
+### From VSCode Marketplace
+
 1. Open VSCode
 2. Go to Extensions (Ctrl+Shift+X / Cmd+Shift+X)
 3. Search for "Gruvbox Crisp"
 4. Click Install
+
+### From GitHub
+
+1. Clone the repository: `git clone https://github.com/vatsalvats/gruvbox_custom_themes.git`
+2. Open VSCode
+3. Go to Extensions (Ctrl+Shift+X / Cmd+Shift+X)
+4. Click "Install from VSIX..."
+5. Select the `.vsix` file from the cloned repository
 
 ## Color Palette
 
