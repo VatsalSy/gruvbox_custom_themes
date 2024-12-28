@@ -1,11 +1,11 @@
 # Gruvbox Crisp Color Theme (with TeX)
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/vatsalsy.gruvbox-crisp-tex)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)
+[![Version](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes)](https://github.com/vatsalsy/gruvbox_custom_themes/releases)
+[![License](https://img.shields.io/github/license/vatsalsy/gruvbox_custom_themes)](LICENSE)<br>
 [![Downloads](https://img.shields.io/visual-studio-marketplace/d/vatsalsy.gruvbox-crisp-tex)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/vatsalsy.gruvbox-crisp-tex)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vatsalsy/gruvbox_custom_themes/publish.yml?label=publish)](https://github.com/vatsalsy/gruvbox_custom_themes/actions)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/vatsalsy/gruvbox-crisp-tex)](https://open-vsx.org/extension/vatsalsy/gruvbox-crisp-tex)
-[![License](https://img.shields.io/github/license/vatsalsy/gruvbox_custom_themes)](LICENSE)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/vatsalsy.gruvbox-crisp-tex)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)<br>
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vatsalsy/gruvbox_custom_themes/publish.yml?label=publish)](https://github.com/vatsalsy/gruvbox_custom_themes/actions)<br>
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/vatsalsy/gruvbox-crisp-tex)](https://open-vsx.org/extension/vatsalsy/gruvbox-crisp-tex)<br>
 
 A collection of high-contrast VSCode themes based on the Gruvbox color scheme, optimized for clarity, readability, and enhanced LaTeX support.
 
