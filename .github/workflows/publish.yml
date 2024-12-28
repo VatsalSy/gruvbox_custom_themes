@@ -4,7 +4,12 @@ on:
   push:
     tags:
       - 'v*.*.*'  # Triggers on version tags, e.g., v1.2.3
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Test run without publishing'
+        type: boolean
+        default: false
   release:
     types: [published]
 
@@ -26,7 +31,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
 
       - name: Install vsce and ovsx
         run: npm install -g @vscode/vsce ovsx
@@ -51,10 +55,19 @@ jobs:
         id: check_versions
         env:
           VERSION: ${{ steps.get_version.outputs.version }}
+          DRY_RUN: ${{ github.event.inputs.dry_run == 'true' }}
         run: |
           VS_EXISTS="false"
           OVSX_EXISTS="false"
           
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "::notice::Running in test mode - skipping version checks"
+            echo "vs_exists=false" >> $GITHUB_OUTPUT
+            echo "ovsx_exists=false" >> $GITHUB_OUTPUT
+            echo "should_publish=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
           echo "Checking version $VERSION on VS Marketplace..."
           if npx @vscode/vsce show vatsalsy.gruvbox-crisp-tex $VERSION 2>/dev/null; then
             VS_EXISTS="true"
@@ -94,18 +107,31 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
 
       - name: Install dependencies
-        run: |
-          npm ci  # Use ci instead of install for more reliable builds
-          npm install -g @vscode/vsce ovsx
+        run: npm install -g @vscode/vsce ovsx
 
       - name: Package extension
-        run: npx @vscode/vsce package
+        run: |
+          echo "Packaging extension..."
+          npx @vscode/vsce package || {
+            echo "::error::Failed to package extension"
+            exit 1
+          }
+          echo "::notice::Successfully packaged extension"
+
+      - name: Test mode notice
+        if: github.event.inputs.dry_run == 'true'
+        run: |
+          echo "::notice::Running in test mode - skipping actual publishing"
+          echo "### Test Mode Results" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Extension packaging successful" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Version format valid" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Would publish to VS Marketplace" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Would publish to Open VSX Registry" >> $GITHUB_STEP_SUMMARY
 
       - name: Publish to VS Marketplace
-        if: needs.check-version.outputs.vs_exists != 'true'
+        if: needs.check-version.outputs.vs_exists != 'true' && github.event.inputs.dry_run != 'true'
         env:
           VSCE_TOKEN: ${{ secrets.VS_MARKETPLACE_TOKEN }}
           VERSION: ${{ needs.check-version.outputs.version }}
@@ -118,7 +144,7 @@ jobs:
           echo "::notice::Successfully published to VS Marketplace"
 
       - name: Publish to Open VSX Registry
-        if: needs.check-version.outputs.ovsx_exists != 'true'
+        if: needs.check-version.outputs.ovsx_exists != 'true' && github.event.inputs.dry_run != 'true'
         env:
           OVSX_TOKEN: ${{ secrets.OPEN_VSX_TOKEN }}
           VERSION: ${{ needs.check-version.outputs.version }}
@@ -134,6 +160,7 @@ jobs:
           echo "::notice::Successfully published to Open VSX Registry"
 
       - name: Publish Summary
+        if: github.event.inputs.dry_run != 'true'
         run: |
           echo "### Publishing Summary" >> $GITHUB_STEP_SUMMARY
           echo "Version: ${{ needs.check-version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
