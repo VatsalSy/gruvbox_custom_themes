@@ -45,6 +45,16 @@ The theme uses the following Gruvbox colors:
 - Aqua: #8ec07c
 - Orange: #fe8019
 
+## Theme Variants
+
+This collection includes three variants of the Gruvbox Dark theme:
+
+1. **High Contrast (Hard)** - Uses the darkest background (#1d2021) for maximum contrast
+2. **Medium** - Uses a balanced background (#282828) for comfortable viewing
+3. **Soft** - Uses a softer background (#32302f) for reduced eye strain
+
+All variants maintain the same high-quality syntax highlighting and LaTeX support, differing only in their background intensity.
+
 ## Language Support
 
 Enhanced syntax highlighting for:

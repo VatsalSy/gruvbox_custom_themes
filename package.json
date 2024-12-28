@@ -7,6 +7,7 @@
   "engines": {
     "vscode": "^1.50.0"
   },
+  "icon": "icon.png",
   "categories": [
     "Themes"
   ],
@@ -14,7 +15,8 @@
     "theme",
     "gruvbox",
     "dark theme",
-    "high contrast"
+    "high contrast",
+    "latex"
   ],
   "galleryBanner": {
     "color": "#1d2021",
@@ -23,9 +25,19 @@
   "contributes": {
     "themes": [
       {
-        "label": "Vatsal Gruvbox Dark (High Contrast)",
+        "label": "Vatsal Gruvbox Dark (High Contrast, with TeX)",
         "uiTheme": "vs-dark",
         "path": "./themes/custom_gruvbox_dark-color-theme.json"
+      },
+      {
+        "label": "Vatsal Gruvbox Dark (Medium, with TeX)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/custom_gruvbox_dark_medium-color-theme.json"
+      },
+      {
+        "label": "Vatsal Gruvbox Dark (Soft, with TeX)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/custom_gruvbox_dark_soft-color-theme.json"
       }
     ]
   },
