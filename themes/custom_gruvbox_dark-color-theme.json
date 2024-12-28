@@ -1,0 +1,76 @@
+{
+  "name": "Vatsal Gruvbox Windsurf",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1d2021",
+    "editor.foreground": "#fbf1c7",
+    "activityBar.background": "#1d2021",
+    "sideBar.background": "#1d2021",
+    "terminal.background": "#1d2021",
+    "terminal.foreground": "#fbf1c7",
+    "statusBar.background": "#1d2021",
+    "editorGutter.background": "#1d2021",
+    "editor.lineHighlightBackground": "#282828",
+    "editor.selectionBackground": "#504945",
+    "editorCursor.foreground": "#fe8019",
+    "editorLineNumber.foreground": "#928374",
+    "editorLineNumber.activeForeground": "#fe8019"
+  },
+  "tokenColors": [
+    {
+      "scope": [
+        "keyword",
+        "storage.type",
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "#fb4934"
+      }
+    },
+    {
+      "scope": [
+        "string",
+        "string.quoted"
+      ],
+      "settings": {
+        "foreground": "#b8bb26"
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric",
+        "constant.language",
+        "constant.character",
+        "constant.other"
+      ],
+      "settings": {
+        "foreground": "#d3869b"
+      }
+    },
+    {
+      "scope": [
+        "variable",
+        "variable.parameter"
+      ],
+      "settings": {
+        "foreground": "#fbf1c7"
+      }
+    },
+    {
+      "scope": ["comment"],
+      "settings": {
+        "foreground": "#928374",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#8ec07c"
+      }
+    }
+  ]
+}
