@@ -29,12 +29,29 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Publish to Visual Studio Marketplace
+      - name: Update version
+        run: |
+          # Get the latest git tag
+          VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
+          VERSION=${VERSION#v}  # Remove 'v' prefix
+          
+          # Read current version from package.json
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          
+          # If versions are different, update package.json
+          if [ "$VERSION" != "$CURRENT_VERSION" ]; then
+            npm version $VERSION --no-git-tag-version
+          fi
+
+      - name: Check and publish to VS Marketplace
+        id: vs_marketplace
+        continue-on-error: true
         env:
           VSCE_TOKEN: ${{ secrets.VS_MARKETPLACE_TOKEN }}
         run: npx @vscode/vsce publish -p $VSCE_TOKEN
 
       - name: Create Open VSX namespace and publish
+        if: steps.vs_marketplace.outcome == 'success'
         env:
           OVSX_TOKEN: ${{ secrets.OPEN_VSX_TOKEN }}
         run: |
