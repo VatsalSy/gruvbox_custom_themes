@@ -61,6 +61,24 @@ jobs:
             exit 0
           fi
 
+      - name: Check if version exists and publish to Open VSX Registry
+        id: open_vsx
+        continue-on-error: true
+        env:
+          OVSX_TOKEN: ${{ secrets.OPEN_VSX_TOKEN }}
+        run: |
+          # Get current version
+          VERSION=$(node -p "require('./package.json').version")
+          
+          # Try to view the extension info
+          if ! npx ovsx get vatsalsy.gruvbox-crisp-tex $VERSION 2>/dev/null; then
+            echo "Version $VERSION does not exist on Open VSX. Publishing..."
+            npx ovsx publish -p $OVSX_TOKEN
+          else
+            echo "Version $VERSION already exists on Open VSX. Skipping publish."
+            exit 0
+          fi
+
       - name: Create Open VSX namespace and publish
         if: steps.vs_marketplace.outcome == 'success'
         env:
