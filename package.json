@@ -3,7 +3,7 @@
   "publisher": "vatsalsy",
   "displayName": "Gruvbox Crisp Color Theme (with TeX)",
   "description": "A collection of high-contrast themes based on Gruvbox with clear foregrounds",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.50.0"
   },
