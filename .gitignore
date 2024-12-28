@@ -3,11 +3,8 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
-.git
-.github
 **/*.map
 **/*.ts
 .eslintrc.json
 **/tsconfig.json
 **/.eslintrc.json
-**/*.vsix
