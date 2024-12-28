@@ -1,6 +1,6 @@
-# Vatsal Gruvbox Theme Collection
+# Gruvbox Crisp Color Theme (with TeX)
 
-A collection of high-contrast VSCode themes based on the Gruvbox color scheme, optimized for clarity and readability.
+A collection of high-contrast VSCode themes based on the Gruvbox color scheme, optimized for clarity, readability, and enhanced LaTeX support.
 
 ## Acknowledgment
 
@@ -28,7 +28,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 
 1. Open VSCode
 2. Go to Extensions (Ctrl+Shift+X / Cmd+Shift+X)
-3. Search for "Vatsal Gruvbox"
+3. Search for "Gruvbox Crisp"
 4. Click Install
 
 ## Color Palette
@@ -77,7 +77,7 @@ To customize the theme, you can override settings in your `settings.json`:
 ```json
 {
   "workbench.colorCustomizations": {
-    "[Vatsal Gruvbox Dark (High Contrast)]": {
+    "[Gruvbox Crisp (High Contrast, with TeX)]": {
       // Add your customizations here
     }
   }

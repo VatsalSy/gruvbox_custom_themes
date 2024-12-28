@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "Vatsal Gruvbox Dark (High Contrast, with TeX)",
+  "name": "Gruvbox Crisp (High Contrast, with TeX)",
   "type": "dark",
   "semanticHighlighting": true,
 

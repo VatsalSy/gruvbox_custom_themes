@@ -1,9 +1,9 @@
 {
-  "name": "vatsal-themes",
+  "name": "gruvbox-crisp-tex",
   "publisher": "vatsalsy",
-  "displayName": "Vatsal Theme Collection",
+  "displayName": "Gruvbox Crisp Color Theme (with TeX)",
   "description": "A collection of high-contrast themes based on Gruvbox with clear foregrounds",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -25,32 +25,32 @@
   "contributes": {
     "themes": [
       {
-        "label": "Vatsal Gruvbox Dark (High Contrast, with TeX)",
+        "label": "Gruvbox Crisp (High Contrast, with TeX)",
         "uiTheme": "vs-dark",
-        "path": "./themes/custom_gruvbox_dark-color-theme.json"
+        "path": "./themes/gruvbox-crisp-high-contrast.json"
       },
       {
-        "label": "Vatsal Gruvbox Dark (Medium, with TeX)",
+        "label": "Gruvbox Crisp (Medium, with TeX)",
         "uiTheme": "vs-dark",
-        "path": "./themes/custom_gruvbox_dark_medium-color-theme.json"
+        "path": "./themes/gruvbox-crisp-medium.json"
       },
       {
-        "label": "Vatsal Gruvbox Dark (Soft, with TeX)",
+        "label": "Gruvbox Crisp (Soft, with TeX)",
         "uiTheme": "vs-dark",
-        "path": "./themes/custom_gruvbox_dark_soft-color-theme.json"
+        "path": "./themes/gruvbox-crisp-soft.json"
       }
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/VatsalSy/vscode_custom_themes"
+    "url": "https://github.com/VatsalSy/gruvbox-crisp-tex"
   },
   "bugs": {
-    "url": "https://github.com/VatsalSy/vscode_custom_themes/issues"
+    "url": "https://github.com/VatsalSy/gruvbox-crisp-tex/issues"
   },
   "author": {
     "name": "Vatsal"
   },
   "license": "MIT",
-  "homepage": "https://github.com/VatsalSy/vscode_custom_themes#readme"
+  "homepage": "https://github.com/VatsalSy/gruvbox-crisp-tex#readme"
 }
