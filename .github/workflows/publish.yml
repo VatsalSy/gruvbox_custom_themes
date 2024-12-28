@@ -29,10 +29,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Publish to Visual Studio Marketplace & Open VSX
+      - name: Publish to Visual Studio Marketplace
         env:
           VSCE_TOKEN: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+        run: npx @vscode/vsce publish -p $VSCE_TOKEN
+
+      - name: Create Open VSX namespace and publish
+        env:
           OVSX_TOKEN: ${{ secrets.OPEN_VSX_TOKEN }}
         run: |
-          npx @vscode/vsce publish -p $VSCE_TOKEN
+          # Try to create namespace (it's ok if it already exists)
+          npx ovsx create-namespace vatsalsy -p $OVSX_TOKEN || true
+          # Publish to Open VSX
           npx ovsx publish -p $OVSX_TOKEN
