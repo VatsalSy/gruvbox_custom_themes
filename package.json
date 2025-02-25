@@ -1,9 +1,9 @@
 {
   "name": "gruvbox-crisp-tex",
   "publisher": "vatsalsy",
-  "displayName": "Gruvbox Crisp Color Theme (with TeX)",
+  "displayName": "Gruvbox Crisp Color Theme Collection",
   "description": "A collection of high-contrast themes based on Gruvbox with clear foregrounds",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -38,6 +38,11 @@
         "label": "Gruvbox Crisp (Soft, with TeX)",
         "uiTheme": "vs-dark",
         "path": "./themes/gruvbox-crisp-soft.json"
+      },
+      {
+        "label": "Gruvbox Crisp Anysphere Blend",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-crisp-high-contrast-purple.json"
       }
     ]
   },
