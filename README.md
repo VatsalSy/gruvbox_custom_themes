@@ -70,12 +70,12 @@ The newest addition to the collection, **Gruvbox Crisp Anysphere Blend**, combin
   - Green: #A3BE8C
   - Yellow: #EBCB8B
   - Blue: #88C0D0
-  - Purple: #68246D
+  - Purple: #68246D (custom deep purple, different from Gruvbox's #d3869b)
   - Magenta: #B48EAD
 - **Enhanced Readability**: Maintains the excellent readability of Gruvbox while updating visual aesthetics
 - **Consistent Experience**: Terminal colors and UI elements are harmonized with the editor theme
 
-This variant provides a perfect blend for users who appreciate Gruvbox's token organization but prefer a more modern aesthetic inspired by Cursor's design language.
+This variant provides a perfect blend for users who appreciate Gruvbox's token organization but prefer a more modern aesthetic inspired by Cursor's design language. The custom purple (#68246D) is one of the most distinctive features, used for constants, prototype objects, and other special language elements.
 
 ## Color Palette (Original Gruvbox Variants)
 
