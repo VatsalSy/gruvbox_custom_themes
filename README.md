@@ -1,4 +1,4 @@
-# Gruvbox Crisp Color Theme (with TeX)
+# Gruvbox Crisp Color Theme Collection
 
 [![Version](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes)](https://github.com/vatsalsy/gruvbox_custom_themes/releases)
 [![License](https://img.shields.io/github/license/vatsalsy/gruvbox_custom_themes)](LICENSE)
@@ -8,11 +8,11 @@
 [![VS Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/vatsalsy.gruvbox-crisp-tex?label=rating)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)<br>
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/vatsalsy/gruvbox-crisp-tex?label=Open%20VSX)](https://open-vsx.org/extension/vatsalsy/gruvbox-crisp-tex)<br>
 
-A collection of high-contrast VSCode themes based on the Gruvbox color scheme, optimized for clarity, readability, and enhanced LaTeX support.
+A collection of high-contrast VSCode themes based on the Gruvbox color scheme, optimized for clarity, readability, and enhanced language support.
 
 ## Acknowledgment
 
-This theme collection is based on the excellent [Gruvbox Theme by jdinhify](https://github.com/jdinhify/vscode-theme-gruvbox). The original theme provided a solid foundation for building these customized variants.
+This theme collection is based on the excellent [Gruvbox Theme by jdinhify](https://github.com/jdinhify/vscode-theme-gruvbox). The original theme provided a solid foundation for building these customized variants. The Anysphere Blend variant is inspired by the Cursor Dark Anysphere theme.
 
 ## Changes from Original Theme
 
@@ -49,9 +49,37 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 4. Click "Install from VSIX..."
 5. Select the `.vsix` file from the cloned repository
 
-## Color Palette
+## Theme Variants
 
-The theme uses the following Gruvbox colors:
+This collection includes four variants of the Gruvbox Dark theme:
+
+1. **High Contrast (Hard)** - Uses the darkest background (#1d2021) for maximum contrast
+2. **Medium** - Uses a balanced background (#282828) for comfortable viewing
+3. **Soft** - Uses a softer background (#32302f) for reduced eye strain
+4. **Anysphere Blend** - A fusion of Gruvbox structure with Cursor Dark Anysphere colors
+
+All variants maintain the same high-quality syntax highlighting and specialized language support, differing in their background intensity and color schemes.
+
+## Gruvbox Crisp Anysphere Blend
+
+The newest addition to the collection, **Gruvbox Crisp Anysphere Blend**, combines the structured token highlighting of Gruvbox with the modern color palette of Cursor Dark Anysphere:
+
+- **Modern UI**: Adopts Cursor's darker gray backgrounds (#1a1a1a for editor, #141414 for sidebars) with cleaner borders and highlights
+- **Refined Color Palette**: Uses Cursor's vibrant yet balanced colors:
+  - Red: #BF616A
+  - Green: #A3BE8C
+  - Yellow: #EBCB8B
+  - Blue: #88C0D0
+  - Purple: #68246D
+  - Magenta: #B48EAD
+- **Enhanced Readability**: Maintains the excellent readability of Gruvbox while updating visual aesthetics
+- **Consistent Experience**: Terminal colors and UI elements are harmonized with the editor theme
+
+This variant provides a perfect blend for users who appreciate Gruvbox's token organization but prefer a more modern aesthetic inspired by Cursor's design language.
+
+## Color Palette (Original Gruvbox Variants)
+
+The traditional variants use the following Gruvbox colors:
 
 - Background: #1d2021 (Dark0 Hard)
 - Foreground: #ebdbb2 (Light1)
@@ -62,16 +90,6 @@ The theme uses the following Gruvbox colors:
 - Purple: #d3869b
 - Aqua: #8ec07c
 - Orange: #fe8019
-
-## Theme Variants
-
-This collection includes three variants of the Gruvbox Dark theme:
-
-1. **High Contrast (Hard)** - Uses the darkest background (#1d2021) for maximum contrast
-2. **Medium** - Uses a balanced background (#282828) for comfortable viewing
-3. **Soft** - Uses a softer background (#32302f) for reduced eye strain
-
-All variants maintain the same high-quality syntax highlighting and LaTeX support, differing only in their background intensity.
 
 ## Language Support
 
@@ -96,6 +114,9 @@ To customize the theme, you can override settings in your `settings.json`:
 {
   "workbench.colorCustomizations": {
     "[Gruvbox Crisp (High Contrast, with TeX)]": {
+      // Add your customizations here
+    },
+    "[Gruvbox Crisp Anysphere Blend]": {
       // Add your customizations here
     }
   }
