@@ -1120,8 +1120,8 @@
     "editorLineNumber.foreground": "#665c54", // Increased visibility - using gruvbox dark4
     "editorLineNumber.activeForeground": "#FFFFFF", // From Cursor theme
     "editorCursor.foreground": "#FFFFFF", // From Cursor theme
-    "editor.selectionBackground": "#7c38832a", // Reduced contrast - softer purple selection
-    "editor.selectionHighlightBackground": "#5043541a", // Reduced contrast - very subtle highlight
+    "editor.selectionBackground": "#9C36B666", // Vibrant purple with good visibility
+    "editor.selectionHighlightBackground": "#7D338844", // Richer purple with moderate transparency
     "editor.hoverHighlightBackground": "#292929", // From Cursor theme
     "editorLink.activeForeground": "#FFFFFF", // From Cursor theme
     "editor.findMatchBackground": "#A35DB066", // Lighter purple with transparency
@@ -1248,7 +1248,7 @@
     "terminal.ansiBrightWhite": "#FFFFFF", // palette 15 from Ghostty config
     "terminal.foreground": "#FFFFFF", // Matching Ghostty foreground
     "terminal.background": "#0a0a0a", // Using custom ultra-dark background
-    "terminal.selectionBackground": "#7D3383dd", // Richer purple with transparency
+    "terminal.selectionBackground": "#9C36B666", // Vibrant purple matching editor selection
     "terminalCursor.background": "#FFFFFF22", // From Cursor theme
     "terminalCursor.foreground": "#FFFFFF", // From Cursor theme
 
