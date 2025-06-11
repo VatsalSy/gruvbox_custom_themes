@@ -22,7 +22,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 - Adjusted UI element colors for clearer visual hierarchy
 - Optimized terminal colors for better visibility
 - Refined bracket pair colorization
-- Added comprehensive LaTeX support with specialized syntax highlighting
+- Added comprehensive LaTeX support with specialized syntax highlighting (all variants)
 
 ## Features
 
@@ -103,7 +103,7 @@ Enhanced syntax highlighting for:
 - JSON
 - Markdown
 - Shell scripts
-- LaTeX (with specialized math, environment, and reference highlighting)
+- LaTeX/TeX (with specialized math, environment, and reference highlighting in all theme variants)
 - And more...
 
 ## Customization
