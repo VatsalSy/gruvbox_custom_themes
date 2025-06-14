@@ -37,7 +37,7 @@
 ### Background Colors
 | Color | Hex | Name | Usage |
 |-------|-----|------|--------|
-| ![#0a0a0a](https://via.placeholder.com/15/0a0a0a/000000?text=+) | `#0a0a0a` | Ultra Dark | High contrast variant |
+| ![#0a0a0a](https://via.placeholder.com/15/0a0a0a/000000?text=+) | `#0a0a0a` | Ultra-Dark | High contrast variant |
 | ![#141414](https://via.placeholder.com/15/141414/000000?text=+) | `#141414` | Sidebar | Sidebar background |
 | ![#1a1a1a](https://via.placeholder.com/15/1a1a1a/000000?text=+) | `#1a1a1a` | Editor | Main editor background |
 | ![#292929](https://via.placeholder.com/15/292929/000000?text=+) | `#292929` | Hover | Hover states |

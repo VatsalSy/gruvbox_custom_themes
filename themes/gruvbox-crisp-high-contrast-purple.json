@@ -33,7 +33,7 @@
         "punctuation.definition.comment"
       ],
       "settings": {
-        "foreground": "#928374",
+        "foreground": "#a89984",
         "fontStyle": "italic"
       }
     },
@@ -590,7 +590,7 @@
     {
       "scope": "string.other.link.title.markdown",
       "settings": {
-        "foreground": "#928374",
+        "foreground": "#a89984",
         "fontStyle": "underline"
       }
     },
@@ -1055,7 +1055,7 @@
         "comment.line.percentage.latex"
       ],
       "settings": {
-        "foreground": "#928374",
+        "foreground": "#a89984",
         "fontStyle": "italic"
       }
     }
@@ -1109,7 +1109,7 @@
     "sideBar.border": "#ffffff0d",
     "sideBarTitle.foreground": "#cccccc",
     "sideBarSectionHeader.background": "#0a0a0a",
-    "sideBarSectionHeader.foreground": "#928374",
+    "sideBarSectionHeader.foreground": "#a89984",
     "activityBar.background": "#0a0a0a",
     "activityBar.foreground": "#a89984",
     "activityBar.border": "#ffffff0d",
@@ -1125,7 +1125,7 @@
     "tab.activeBorderTop": "#b14fc0",
     "tab.activeBackground": "#0a0a0a",
     "tab.activeForeground": "#ffffff",
-    "tab.inactiveForeground": "#928374",
+    "tab.inactiveForeground": "#a89984",
     "tab.inactiveBackground": "#0a0a0a",
     "tab.unfocusedActiveForeground": "#ffffff99",
     "tab.unfocusedActiveBorder": "#7d338300",
@@ -1231,7 +1231,7 @@
     "statusBarItem.prominentBackground": "#2a2a2a",
     "statusBarItem.prominentHoverBackground": "#b14fc0",
     "terminal.ansiBlack": "#1a1a1a",
-    "terminal.ansiBrightBlack": "#928374",
+    "terminal.ansiBrightBlack": "#a89984",
     "terminal.ansiRed": "#fb4834",
     "terminal.ansiBrightRed": "#fb4834",
     "terminal.ansiGreen": "#a3be8c",
