@@ -1,7 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
-const THEME_DIR = path.join(__dirname, '..', 'themes');
+// Accept directory path as command-line argument, default to 'themes/'
+const themeDir = process.argv[2] || 'themes';
+const THEME_DIR = path.isAbsolute(themeDir) ? themeDir : path.join(__dirname, '..', themeDir);
 const REQUIRED_SECTIONS = ['colors', 'tokenColors'];
 const REQUIRED_UI_COLORS = [
   'editor.background',
@@ -34,7 +36,7 @@ function validateTheme(themePath) {
     
     // Validate color format (should be hex)
     const colorRegex = /^#[0-9a-f]{6}([0-9a-f]{2})?$/i;
-    let invalidColors = [];
+    const invalidColors = [];
     
     // Check UI colors
     for (const [key, value] of Object.entries(theme.colors || {})) {
@@ -73,8 +75,8 @@ function validateTheme(themePath) {
     const hasUppercase = allColors.some(c => /[A-F]/.test(c));
     const hasLowercase = allColors.some(c => /[a-f]/.test(c));
     
-    if (hasUppercase && hasLowercase) {
-      console.warn('  Warning: Inconsistent hex case (mix of uppercase and lowercase)');
+    if (hasUppercase) {
+      console.warn('  Warning: Uppercase hex colors found (all hex colors must be lowercase)');
     }
     
     // Count token rules
