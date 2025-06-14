@@ -127,8 +127,8 @@
     },
     {
       "scope": [
-        "storage.type",
-        "storage.modifier"
+        "storage.modifier",
+        "storage.type"
       ],
       "settings": {
         "foreground": "#fe8019"
@@ -257,13 +257,13 @@
     {
       "name": "Types declaration and references",
       "scope": [
-        "meta.type.name",
-        "meta.return.type",
-        "meta.return-type",
         "meta.cast",
+        "meta.return-type",
+        "meta.return.type",
         "meta.type.annotation",
-        "support.type",
+        "meta.type.name",
         "storage.type.cs",
+        "support.type",
         "variable.class"
       ],
       "settings": {
@@ -272,8 +272,8 @@
     },
     {
       "scope": [
-        "variable.this",
-        "support.variable"
+        "support.variable",
+        "variable.this"
       ],
       "settings": {
         "foreground": "#d3869b"
@@ -282,11 +282,11 @@
     {
       "scope": [
         "entity.name",
-        "entity.static",
+        "entity.name.class",
         "entity.name.class.static.function",
         "entity.name.function",
-        "entity.name.class",
-        "entity.name.type"
+        "entity.name.type",
+        "entity.static"
       ],
       "settings": {
         "foreground": "#fabd2f"
@@ -334,11 +334,11 @@
       "name": "variables",
       "scope": [
         "meta.parameter.type.variable",
-        "variable.parameter",
+        "string.constant.other.placeholder",
+        "variable",
         "variable.name",
         "variable.other",
-        "variable",
-        "string.constant.other.placeholder"
+        "variable.parameter"
       ],
       "settings": {
         "foreground": "#83a598"
@@ -373,9 +373,9 @@
     {
       "name": "URL",
       "scope": [
-        "*url*",
         "*link*",
-        "*uri*"
+        "*uri*",
+        "*url*"
       ],
       "settings": {
         "fontStyle": "underline"
@@ -384,8 +384,8 @@
     {
       "name": "Python function",
       "scope": [
-        "meta.function.python",
-        "entity.name.function.python"
+        "entity.name.function.python",
+        "meta.function.python"
       ],
       "settings": {
         "foreground": "#8ec07c"
@@ -394,9 +394,9 @@
     {
       "name": "Python Function/Class definition keywords",
       "scope": [
-        "storage.type.function.python",
         "storage.modifier.declaration",
         "storage.type.class.python",
+        "storage.type.function.python",
         "storage.type.string.python"
       ],
       "settings": {
@@ -455,8 +455,8 @@
     },
     {
       "scope": [
-        "string.interpolated.dollar.shell",
-        "string.interpolated.backtick.shell"
+        "string.interpolated.backtick.shell",
+        "string.interpolated.dollar.shell"
       ],
       "settings": {
         "foreground": "#8ec07c"
@@ -477,9 +477,9 @@
     {
       "name": "C# functions & namespace",
       "scope": [
-        "meta.function.cs",
         "entity.name.function.cs",
-        "entity.name.type.namespace.cs"
+        "entity.name.type.namespace.cs",
+        "meta.function.cs"
       ],
       "settings": {
         "foreground": "#b8bb26"
@@ -488,9 +488,9 @@
     {
       "name": "C# Variables",
       "scope": [
-        "keyword.other.using.cs",
         "entity.name.variable.field.cs",
         "entity.name.variable.local.cs",
+        "keyword.other.using.cs",
         "variable.other.readwrite.cs"
       ],
       "settings": {
@@ -500,8 +500,8 @@
     {
       "name": "C# This",
       "scope": [
-        "keyword.other.this.cs",
-        "keyword.other.base.cs"
+        "keyword.other.base.cs",
+        "keyword.other.this.cs"
       ],
       "settings": {
         "foreground": "#d3869b"
@@ -567,8 +567,8 @@
     },
     {
       "scope": [
-        "source.java variable.other.object",
-        "source.java variable.other.definition.java"
+        "source.java variable.other.definition.java",
+        "source.java variable.other.object"
       ],
       "settings": {
         "foreground": "#ebdbb2"
@@ -652,8 +652,8 @@
     },
     {
       "scope": [
-        "markup.inline.raw",
-        "markup.fenced_code.block"
+        "markup.fenced_code.block",
+        "markup.inline.raw"
       ],
       "settings": {
         "foreground": "#8ec07c"
@@ -727,9 +727,9 @@
     },
     {
       "scope": [
-        "source.css support.function.transform",
+        "source.css support.function.misc",
         "source.css support.function.timing-function",
-        "source.css support.function.misc"
+        "source.css support.function.transform"
       ],
       "settings": {
         "foreground": "#fb4934"
@@ -738,10 +738,10 @@
     {
       "name": "CSS property value",
       "scope": [
-        "support.property-value",
         "constant.rgb-value",
-        "support.property-value.scss",
-        "constant.rgb-value.scss"
+        "constant.rgb-value.scss",
+        "support.property-value",
+        "support.property-value.scss"
       ],
       "settings": {
         "foreground": "#d65d0e"
@@ -807,8 +807,8 @@
     },
     {
       "scope": [
-        "source.go keyword.package",
-        "source.go keyword.import"
+        "source.go keyword.import",
+        "source.go keyword.package"
       ],
       "settings": {
         "foreground": "#8ec07c"
@@ -878,8 +878,8 @@
     {
       "name": "ReasonML property",
       "scope": [
-        "source.reason support.property-value",
-        "source.reason entity.name.filename"
+        "source.reason entity.name.filename",
+        "source.reason support.property-value"
       ],
       "settings": {
         "foreground": "#fe8019"
@@ -924,11 +924,11 @@
     {
       "name": "LaTeX - commands",
       "scope": [
+        "keyword.control.latex",
         "support.function.beamer.latex",
         "support.function.general.latex",
-        "support.function.section.latex",
         "support.function.latex",
-        "keyword.control.latex"
+        "support.function.section.latex"
       ],
       "settings": {
         "foreground": "#fe8019"
