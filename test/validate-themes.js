@@ -34,8 +34,8 @@ function validateTheme(themePath) {
       console.warn(`  Warning: Missing UI colors: ${missingColors.join(', ')}`);
     }
     
-    // Validate color format (should be hex)
-    const colorRegex = /^#[0-9a-f]{6}([0-9a-f]{2})?$/i;
+    // Validate color format (should be hex - 3, 4, 6, or 8 digits)
+    const colorRegex = /^#([0-9a-f]{3}|[0-9a-f]{4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
     const invalidColors = [];
     
     // Check UI colors
@@ -59,7 +59,7 @@ function validateTheme(themePath) {
       }
     }
     
-    // Check for consistency in hex case
+    // Check for uppercase hex characters
     const allColors = [];
     for (const value of Object.values(theme.colors || {})) {
       if (typeof value === 'string' && colorRegex.test(value)) {
@@ -73,7 +73,6 @@ function validateTheme(themePath) {
     }
     
     const hasUppercase = allColors.some(c => /[A-F]/.test(c));
-    const hasLowercase = allColors.some(c => /[a-f]/.test(c));
     
     if (hasUppercase) {
       console.warn('  Warning: Uppercase hex colors found (all hex colors must be lowercase)');
@@ -94,7 +93,16 @@ function validateTheme(themePath) {
 console.log('Theme Validation Test');
 console.log('====================');
 
-const themeFiles = fs.readdirSync(THEME_DIR).filter(f => f.endsWith('.json'));
+const themeFiles = fs.readdirSync(THEME_DIR).filter(f => {
+  if (!f.endsWith('.json')) return false;
+  const filePath = path.join(THEME_DIR, f);
+  try {
+    const stat = fs.statSync(filePath);
+    return stat.isFile();
+  } catch (error) {
+    return false;
+  }
+});
 const results = [];
 
 for (const themeFile of themeFiles) {

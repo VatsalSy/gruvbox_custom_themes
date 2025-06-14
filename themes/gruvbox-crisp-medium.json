@@ -1103,6 +1103,7 @@
     "editorBracketHighlight.foreground4": "#98971a",
     "editorBracketHighlight.foreground5": "#d79921",
     "editorBracketHighlight.foreground6": "#d65d0e",
+    "editorBracketHighlight.foreground7": "#928374",
     "editorBracketHighlight.unexpectedBracket.foreground": "#cc241d",
     "diffEditor.insertedTextBackground": "#b8bb2633",
     "diffEditor.removedTextBackground": "#fb493433",
