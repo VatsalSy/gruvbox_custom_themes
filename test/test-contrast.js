@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const THEME_DIR = path.join(__dirname, '..', 'themes');
 const MIN_CONTRAST_RATIO = 4.5; // WCAG AA standard for normal text
@@ -7,11 +7,11 @@ const MIN_CONTRAST_RATIO_LARGE = 3; // WCAG AA standard for large text
 
 // Convert hex to RGB
 function hexToRgb(hex) {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i.exec(hex);
   return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16)
+    r: Number.parseInt(result[1], 16),
+    g: Number.parseInt(result[2], 16),
+    b: Number.parseInt(result[3], 16)
   } : null;
 }
 
@@ -96,20 +96,20 @@ function testThemeContrast(themePath) {
       }
     }
     
-    // Sort by contrast ratio
-    tokenTests.sort((a, b) => a.contrast - b.contrast);
-    
-    // Show worst performing tokens
-    const failingTokens = tokenTests.filter(t => !t.pass);
-    if (failingTokens.length > 0) {
-      console.log(`  ⚠️  ${failingTokens.length} token colors fail WCAG AA standard:`);
-      failingTokens.slice(0, 5).forEach(t => {
-        console.log(`    - ${t.name}: ${t.contrast.toFixed(2)} (${t.color})`);
-      });
-    }
-    
-    // Show best and worst contrast
     if (tokenTests.length > 0) {
+      // Sort by contrast ratio
+      tokenTests.sort((a, b) => a.contrast - b.contrast);
+      
+      // Show worst performing tokens
+      const failingTokens = tokenTests.filter(t => !t.pass);
+      if (failingTokens.length > 0) {
+        console.log(`  ⚠️  ${failingTokens.length} token colors fail WCAG AA standard:`);
+        failingTokens.slice(0, 5).forEach(t => {
+          console.log(`    - ${t.name}: ${t.contrast.toFixed(2)} (${t.color})`);
+        });
+      }
+      
+      // Show best and worst contrast
       console.log(`  Token contrast range: ${tokenTests[0].contrast.toFixed(2)} - ${tokenTests[tokenTests.length - 1].contrast.toFixed(2)}`);
       console.log(`  Passing tokens: ${tokenTests.filter(t => t.pass).length}/${tokenTests.length}`);
     }
