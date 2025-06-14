@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Standardized theme file organization and color definitions
-- All themes now have consistent token color rule counts (127-133 rules)
+- All themes now have consistent token color rule counts (127–133 rules)
 
 ### Fixed
 
