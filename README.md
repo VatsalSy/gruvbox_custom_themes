@@ -125,26 +125,7 @@ To customize the theme, you can override settings in your `settings.json`:
 
 ## Changelog
 
-### Version 1.1.8
-- **Fixed**: Standardized all hex color values to lowercase across all themes
-- **Fixed**: Color typo #FB4834 → #fb4934 in purple themes
-- **Fixed**: Unified theme naming: "Durham Blend" → "Anysphere Blend" for consistency
-- **Fixed**: Updated documentation to clarify LaTeX support is available in all theme variants
-- **Added**: Theme validation tests to ensure JSON correctness
-- **Added**: Color contrast ratio tests for accessibility compliance
-- **Added**: *.vsix to .gitignore and removed VSIX files from repository
-- **Changed**: Standardized theme file organization and color definitions
-- **Changed**: All themes now have consistent token color rule counts (127-133 rules)
-
-### Version 1.1.7
-- **Fixed**: Removed all JSON comments from theme files for strict JSON compliance
-- **Fixed**: Updated repository URLs in package.json to match actual repository name
-- **Fixed**: README download badge to use dynamic latest release link
-- **Fixed**: Fully implemented medium and soft theme variants with complete token definitions
-
-### Version 1.1.6
-- **Fixed**: Text selection visibility in high contrast purple theme
-- **Changed**: Improved overall contrast and readability
+For the complete changelog with detailed version history, see [CHANGELOG.md](CHANGELOG.md).
 
 ## Contributing
 
