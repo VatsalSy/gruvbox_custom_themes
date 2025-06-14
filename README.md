@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes)](https://github.com/vatsalsy/gruvbox_custom_themes/releases)
 [![License](https://img.shields.io/github/license/vatsalsy/gruvbox_custom_themes)](LICENSE)
-[![Download VSIX](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes?label=download%20VSIX&color=blue)](https://github.com/VatsalSy/gruvbox_custom_themes/raw/refs/heads/main/gruvbox-crisp-tex-1.1.6.vsix)
+[![Download VSIX](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes?label=download%20VSIX&color=blue)](https://github.com/VatsalSy/gruvbox_custom_themes/releases/latest)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vatsalsy/gruvbox_custom_themes/publish.yml?label=publish)](https://github.com/vatsalsy/gruvbox_custom_themes/actions)<br>
 [![VS Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/vatsalsy.gruvbox-crisp-tex?label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)
 [![VS Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/vatsalsy.gruvbox-crisp-tex?label=rating)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)<br>
@@ -22,7 +22,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 - Adjusted UI element colors for clearer visual hierarchy
 - Optimized terminal colors for better visibility
 - Refined bracket pair colorization
-- Added comprehensive LaTeX support with specialized syntax highlighting
+- Added comprehensive LaTeX support with specialized syntax highlighting (all variants)
 
 ## Features
 
@@ -103,7 +103,7 @@ Enhanced syntax highlighting for:
 - JSON
 - Markdown
 - Shell scripts
-- LaTeX (with specialized math, environment, and reference highlighting)
+- LaTeX/TeX (with specialized math, environment, and reference highlighting in all theme variants)
 - And more...
 
 ## Customization
@@ -122,6 +122,10 @@ To customize the theme, you can override settings in your `settings.json`:
   }
 }
 ```
+
+## Changelog
+
+For the complete changelog with detailed version history, see [CHANGELOG.md](CHANGELOG.md).
 
 ## Contributing
 
