@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes)](https://github.com/vatsalsy/gruvbox_custom_themes/releases)
 [![License](https://img.shields.io/github/license/vatsalsy/gruvbox_custom_themes)](LICENSE)
-[![Download VSIX](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes?label=download%20VSIX&color=blue)](https://github.com/VatsalSy/gruvbox_custom_themes/raw/refs/heads/main/gruvbox-crisp-tex-1.1.6.vsix)
+[![Download VSIX](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes?label=download%20VSIX&color=blue)](https://github.com/VatsalSy/gruvbox_custom_themes/releases/latest)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vatsalsy/gruvbox_custom_themes/publish.yml?label=publish)](https://github.com/vatsalsy/gruvbox_custom_themes/actions)<br>
 [![VS Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/vatsalsy.gruvbox-crisp-tex?label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)
 [![VS Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/vatsalsy.gruvbox-crisp-tex?label=rating)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)<br>
@@ -22,7 +22,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 - Adjusted UI element colors for clearer visual hierarchy
 - Optimized terminal colors for better visibility
 - Refined bracket pair colorization
-- Added comprehensive LaTeX support with specialized syntax highlighting
+- Added comprehensive LaTeX support with specialized syntax highlighting (all variants)
 
 ## Features
 
@@ -103,7 +103,7 @@ Enhanced syntax highlighting for:
 - JSON
 - Markdown
 - Shell scripts
-- LaTeX (with specialized math, environment, and reference highlighting)
+- LaTeX/TeX (with specialized math, environment, and reference highlighting in all theme variants)
 - And more...
 
 ## Customization
@@ -123,9 +123,71 @@ To customize the theme, you can override settings in your `settings.json`:
 }
 ```
 
+## Changelog
+
+For the complete changelog with detailed version history, see [CHANGELOG.md](CHANGELOG.md).
+
 ## Contributing
 
 Feel free to open issues or submit pull requests on GitHub.
+
+## Color Palette Reference
+
+### Traditional Gruvbox Colors
+
+#### Background Colors
+- `#1d2021` (Dark0 Hard) - High-contrast background
+- `#282828` (Dark0) - Medium-contrast background  
+- `#32302f` (Dark0 Soft) - Soft-contrast background
+- `#3c3836` (Dark1) - UI elements
+- `#504945` (Dark2) - Selection background
+- `#665c54` (Dark3) - Inactive elements
+- `#7c6f64` (Dark4) - Comments
+
+#### Foreground Colors
+- `#ebdbb2` (Light1) - Primary text
+- `#d5c4a1` (Light2) - Secondary text
+- `#bdae93` (Light3) - Tertiary text
+- `#a89984` (Light4) - Inactive text
+
+#### Accent Colors
+- `#fb4934` (Bright Red) - Errors, deletions
+- `#b8bb26` (Bright Green) - Success, additions
+- `#fabd2f` (Bright Yellow) - Warnings, functions
+- `#83a598` (Bright Blue) - Info, types
+- `#d3869b` (Bright Purple) - Constants
+- `#8ec07c` (Bright Aqua) - Strings
+- `#fe8019` (Bright Orange) - Numbers
+
+### Anysphere Blend Colors
+
+#### Background Colors
+- `#0a0a0a` (Ultra-Dark) - High-contrast variant
+- `#141414` (Sidebar) - Sidebar background
+- `#1a1a1a` (Editor) - Main editor background
+- `#292929` (Hover) - Hover states
+- `#363636` (Selection) - Selection background
+
+#### Foreground Colors
+- `#d8dee9` (Primary) - Main text color
+- `#ffffff` (Bright) - Emphasized text
+- `#cccccc` (Medium) - Secondary text
+- `#6d6d6d` (Comments) - Comment text
+
+#### Accent Colors
+- `#bf616a` (Red) - Errors, keywords
+- `#a3be8c` (Green) - Strings
+- `#ebcb8b` (Yellow) - Functions
+- `#88c0d0` (Blue) - Types
+- `#a35db0` (Purple) - Constants
+- `#b48ead` (Magenta) - Special
+- `#fe8019` (Orange) - Numbers
+
+### Contrast Guidelines
+
+All color combinations are tested to meet WCAG AA standards:
+- Normal text: 4.5:1 minimum contrast ratio
+- Large text: 3:1 minimum contrast ratio
 
 ## License
 

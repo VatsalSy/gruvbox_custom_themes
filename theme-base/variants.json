@@ -1,0 +1,23 @@
+{
+  "gruvbox-crisp-soft": {
+    "name": "Gruvbox Crisp (Soft, with TeX)",
+    "type": "dark",
+    "background": "#32302f",
+    "backgroundTransparent": "#32302f00"
+  },
+  "gruvbox-crisp-medium": {
+    "name": "Gruvbox Crisp (Medium, with TeX)",
+    "type": "dark",
+    "background": "#282828",
+    "backgroundTransparent": "#28282800"
+  },
+  "gruvbox-crisp-high-contrast": {
+    "name": "Gruvbox Crisp (High Contrast, with TeX)",
+    "type": "dark",
+    "background": "#1d2021",
+    "backgroundTransparent": "#1d202100",
+    "additionalColors": {
+      "editorLineNumber.activeForeground": "#fe8019"
+    }
+  }
+}
