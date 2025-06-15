@@ -62,6 +62,10 @@ function testThemeContrast(themePath) {
     
     // Test main editor contrast
     const mainContrast = getContrastRatio(background, foreground);
+    if (mainContrast === null) {
+      console.error('  ✗ Failed to calculate editor contrast ratio - invalid color format');
+      return false;
+    }
     console.log(`  Editor contrast: ${mainContrast.toFixed(2)} (${mainContrast >= MIN_CONTRAST_RATIO ? '✓ PASS' : '✗ FAIL'})`);
     
     // Test common token colors against background
