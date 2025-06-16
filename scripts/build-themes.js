@@ -8,8 +8,9 @@ const baseTokens = JSON.parse(fs.readFileSync(path.join(THEME_BASE_DIR, 'gruvbox
 const variants = JSON.parse(fs.readFileSync(path.join(THEME_BASE_DIR, 'variants.json'), 'utf8'));
 const baseUIColors = JSON.parse(fs.readFileSync(path.join(THEME_BASE_DIR, 'ui-colors-base.json'), 'utf8'));
 
-function generateTheme(variantKey, variantConfig) {
+function generateTheme(variantConfig) {
   const theme = {
+    $schema: "https://raw.githubusercontent.com/microsoft/vscode/master/extensions/theme-colorful-defaults/schemas/color-theme.schema.json",
     name: variantConfig.name,
     type: variantConfig.type,
     tokenColors: baseTokens.tokenColors,
@@ -68,7 +69,7 @@ function buildThemes() {
   }
 
   for (const [variantKey, variantConfig] of Object.entries(variants)) {
-    const theme = generateTheme(variantKey, variantConfig);
+    const theme = generateTheme(variantConfig);
     const outputPath = path.join(THEMES_DIR, `${variantKey}.json`);
     
     fs.writeFileSync(outputPath, JSON.stringify(theme, null, 2));
