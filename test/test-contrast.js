@@ -7,15 +7,15 @@ const MIN_CONTRAST_RATIO = 4.5; // WCAG AA standard for normal text
 // Convert hex to RGB
 function hexToRgb(hex) {
   // Remove # if present
-  hex = hex.replace(/^#/, '');
+  let hexCode = hex.replace(/^#/, '');
   
   // Handle 3/4-digit short hex codes by expanding them
-  if (hex.length === 3 || hex.length === 4) {
-    hex = hex.split('').map(char => char + char).join('');
+  if (hexCode.length === 3 || hexCode.length === 4) {
+    hexCode = hexCode.split('').map(char => char + char).join('');
   }
   
   // Parse 6/8-digit hex codes
-  const result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i.exec(hex);
+  const result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i.exec(hexCode);
   return result ? {
     r: Number.parseInt(result[1], 16),
     g: Number.parseInt(result[2], 16),

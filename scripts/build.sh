@@ -60,7 +60,7 @@ if [ -d "themes" ]; then
     info "Removed existing themes directory"
 fi
 
-if [ -f "*.vsix" ]; then
+if compgen -G "*.vsix" > /dev/null; then
     rm *.vsix
     info "Removed existing .vsix files"
 fi
@@ -68,37 +68,26 @@ fi
 # Step 4: Generate themes
 info "Generating theme files from base configuration..."
 npm run build
+success "Theme files generated successfully"
 
-if [ $? -eq 0 ]; then
-    success "Theme files generated successfully"
-    
-    # List generated themes
-    info "Generated themes:"
-    for theme in themes/*.json; do
-        echo "  - $(basename "$theme")"
-    done
-else
-    error "Theme generation failed"
-    exit 1
-fi
+# List generated themes
+info "Generated themes:"
+for theme in themes/*.json; do
+    echo "  - $(basename "$theme")"
+done
 
 # Step 5: Package extension (optional)
 if [ "$1" == "--package" ]; then
     info "Creating VSIX package..."
     vsce package
     
-    if [ $? -eq 0 ]; then
-        VSIX_FILE=$(ls *.vsix 2>/dev/null | head -n 1)
-        if [ -n "$VSIX_FILE" ]; then
-            success "Extension packaged successfully: $VSIX_FILE"
-            
-            # Show package info
-            FILE_SIZE=$(du -h "$VSIX_FILE" | cut -f1)
-            info "Package size: $FILE_SIZE"
-        fi
-    else
-        error "Failed to package extension"
-        exit 1
+    VSIX_FILE=$(ls *.vsix 2>/dev/null | head -n 1)
+    if [ -n "$VSIX_FILE" ]; then
+        success "Extension packaged successfully: $VSIX_FILE"
+        
+        # Show package info
+        FILE_SIZE=$(du -h "$VSIX_FILE" | cut -f1)
+        info "Package size: $FILE_SIZE"
     fi
 else
     info "Skipping packaging step (use --package flag to create .vsix file)"
