@@ -197,15 +197,6 @@
       }
     },
     {
-      "name": "Markup",
-      "scope": [
-        "markup.underline.link"
-      ],
-      "settings": {
-        "foreground": "#83a598"
-      }
-    },
-    {
       "name": "Markup Link/URL",
       "scope": [
         "markup.underline.link",
@@ -430,7 +421,9 @@
       "scope": [
         "support.other.variable"
       ],
-      "settings": {}
+      "settings": {
+        "foreground": "#83a598"
+      }
     },
     {
       "name": "Language Invalid",
@@ -1021,10 +1014,18 @@
     "property": "#83a598",
     "property:python": "#83a598",
     "parameter": "#83a598",
+    "parameter.readonly": "#d3869b",
     "variable": "#83a598",
+    "variable.readonly": "#d3869b",
     "function": "#b8bb26",
     "function.builtin": "#fe8019",
     "method": "#b8bb26",
-    "component": "#8ec07c"
+    "component": "#8ec07c",
+    "type": "#fabd2f",
+    "class": "#fabd2f",
+    "interface": "#fabd2f",
+    "enum": "#fabd2f",
+    "enumMember": "#d3869b",
+    "namespace": "#fabd2f"
   }
 }
