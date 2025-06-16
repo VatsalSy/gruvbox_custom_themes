@@ -3,11 +3,19 @@ const path = require('node:path');
 
 const THEME_DIR = path.join(__dirname, '..', 'themes');
 const MIN_CONTRAST_RATIO = 4.5; // WCAG AA standard for normal text
-const MIN_CONTRAST_RATIO_LARGE = 3; // WCAG AA standard for large text
 
 // Convert hex to RGB
 function hexToRgb(hex) {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i.exec(hex);
+  // Remove # if present
+  hex = hex.replace(/^#/, '');
+  
+  // Handle 3/4-digit short hex codes by expanding them
+  if (hex.length === 3 || hex.length === 4) {
+    hex = hex.split('').map(char => char + char).join('');
+  }
+  
+  // Parse 6/8-digit hex codes
+  const result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i.exec(hex);
   return result ? {
     r: Number.parseInt(result[1], 16),
     g: Number.parseInt(result[2], 16),

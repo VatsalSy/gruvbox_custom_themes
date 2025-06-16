@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const THEME_BASE_DIR = path.join(__dirname, '..', 'theme-base');
 const THEMES_DIR = path.join(__dirname, '..', 'themes');
@@ -43,12 +43,12 @@ function generateTheme(variantKey, variantConfig) {
     "debugToolBar.background": variantConfig.background
   };
 
-  const transparentBackgroundColors = {
+  const transparentBackgroundColors = variantConfig.backgroundTransparent ? {
     "editorBracketMatch.border": variantConfig.backgroundTransparent,
     "merge.border": variantConfig.backgroundTransparent,
     "statusBar.debuggingBorder": variantConfig.backgroundTransparent,
     "statusBar.noFolderBorder": variantConfig.backgroundTransparent
-  };
+  } : {};
 
   theme.colors = {
     ...baseUIColors,
