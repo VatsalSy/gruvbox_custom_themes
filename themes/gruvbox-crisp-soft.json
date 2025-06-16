@@ -16,10 +16,12 @@
     {
       "name": "Invalid",
       "scope": [
+        "invalid",
         "invalid.illegal"
       ],
       "settings": {
-        "foreground": "#cc241d"
+        "foreground": "#cc241d",
+        "fontStyle": "strikethrough"
       }
     },
     {
@@ -34,7 +36,7 @@
       }
     },
     {
-      "name": "Constant",
+      "name": "Constant Numeric & Language",
       "scope": [
         "constant.numeric",
         "constant.language"
@@ -141,16 +143,6 @@
       ],
       "settings": {
         "foreground": "#83a598"
-      }
-    },
-    {
-      "name": "Invalid",
-      "scope": [
-        "invalid"
-      ],
-      "settings": {
-        "foreground": "#cc241d",
-        "fontStyle": "strikethrough"
       }
     },
     {
