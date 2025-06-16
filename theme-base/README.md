@@ -11,6 +11,7 @@ This directory contains the base configuration files used to generate the Gruvbo
 ## How it Works
 
 The build script (`scripts/build-themes.js`) combines:
+
 1. Base token colors from `gruvbox-crisp-base.json`
 2. Base UI colors from `ui-colors-base.json`
 3. Variant-specific background colors from `variants.json`
@@ -20,6 +21,7 @@ This generates the complete theme files in the `themes/` directory.
 ## Building Themes
 
 Run the build command from the project root:
+
 ```bash
 npm run build
 ```
