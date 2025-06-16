@@ -65,6 +65,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
    ```
 
 2. Run the build script:
+
    ```bash
    ./scripts/build.sh
    ```
@@ -75,6 +76,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
    - List all generated themes
 
 3. To create a `.vsix` package for distribution:
+
    ```bash
    ./scripts/build.sh --package
    ```
@@ -88,6 +90,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 If you prefer to run the build steps manually:
 
 1. Generate theme files:
+
    ```bash
    npm run build
    # or
