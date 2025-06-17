@@ -19,5 +19,26 @@
     "additionalColors": {
       "editorLineNumber.activeForeground": "#fe8019"
     }
+  },
+  "gruvbox-crisp-purple": {
+    "name": "Gruvbox Crisp Anysphere Blend",
+    "type": "dark",
+    "background": "#1a1a1a",
+    "backgroundTransparent": "#1a1a1a00",
+    "additionalColors": {
+      "sideBar.background": "#141414",
+      "activityBar.background": "#141414"
+    }
+  },
+  "gruvbox-crisp-high-contrast-purple": {
+    "name": "Gruvbox Crisp Anysphere Blend (High Contrast)",
+    "type": "dark",
+    "background": "#141414",
+    "backgroundTransparent": "#14141400",
+    "additionalColors": {
+      "sideBar.background": "#0d0d0d",
+      "activityBar.background": "#0d0d0d",
+      "editorLineNumber.activeForeground": "#B48EAD"
+    }
   }
 }
