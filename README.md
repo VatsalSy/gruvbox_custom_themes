@@ -59,6 +59,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 ### Build Process
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/vatsalsy/gruvbox_custom_themes.git
    cd gruvbox_custom_themes
@@ -98,6 +99,7 @@ If you prefer to run the build steps manually:
    ```
 
 2. Package the extension (requires VSCE):
+
    ```bash
    npm install -g @vscode/vsce
    npx @vscode/vsce package
