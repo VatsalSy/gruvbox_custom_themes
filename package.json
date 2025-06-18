@@ -28,31 +28,31 @@
         "label": "Gruvbox Crisp (High Contrast, with TeX)",
         "uiTheme": "vs-dark",
         "path": "./themes/gruvbox-crisp-high-contrast.json",
-        "semanticHighlighting": "configuredByTheme"
+        "semanticHighlighting": true
       },
       {
         "label": "Gruvbox Crisp (Medium, with TeX)",
         "uiTheme": "vs-dark",
         "path": "./themes/gruvbox-crisp-medium.json",
-        "semanticHighlighting": "configuredByTheme"
+        "semanticHighlighting": true
       },
       {
         "label": "Gruvbox Crisp (Soft, with TeX)",
         "uiTheme": "vs-dark",
         "path": "./themes/gruvbox-crisp-soft.json",
-        "semanticHighlighting": "configuredByTheme"
+        "semanticHighlighting": true
       },
       {
         "label": "Gruvbox Crisp Anysphere Blend",
         "uiTheme": "vs-dark",
         "path": "./themes/gruvbox-crisp-purple.json",
-        "semanticHighlighting": "configuredByTheme"
+        "semanticHighlighting": true
       },
       {
         "label": "Gruvbox Crisp Anysphere Blend (High Contrast)",
         "uiTheme": "vs-dark",
         "path": "./themes/gruvbox-crisp-high-contrast-purple.json",
-        "semanticHighlighting": "configuredByTheme"
+        "semanticHighlighting": true
       }
     ]
   },
