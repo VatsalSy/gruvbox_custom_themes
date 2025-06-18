@@ -16,11 +16,22 @@ function hexToRgb(hex) {
   
   // Parse 6/8-digit hex codes
   const result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i.exec(hexCode);
-  return result ? {
+  if (!result) return null;
+  
+  const rgb = {
     r: Number.parseInt(result[1], 16),
     g: Number.parseInt(result[2], 16),
     b: Number.parseInt(result[3], 16)
-  } : null;
+  };
+  
+  // Check for alpha channel
+  if (result[4]) {
+    rgb.a = Number.parseInt(result[4], 16) / 255;
+    // Warn about transparency
+    console.warn(`    ⚠️  Color ${hex} has alpha transparency (${(rgb.a * 100).toFixed(0)}%) - contrast calculation may be inaccurate`);
+  }
+  
+  return rgb;
 }
 
 // Calculate relative luminance
@@ -36,6 +47,20 @@ function getLuminance(rgb) {
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
+// Blend RGBA color over background
+function blendColors(fg, bg) {
+  if (!fg.a || fg.a === 1) return fg;
+  
+  const alpha = fg.a;
+  const invAlpha = 1 - alpha;
+  
+  return {
+    r: Math.round(fg.r * alpha + bg.r * invAlpha),
+    g: Math.round(fg.g * alpha + bg.g * invAlpha),
+    b: Math.round(fg.b * alpha + bg.b * invAlpha)
+  };
+}
+
 // Calculate contrast ratio
 function getContrastRatio(color1, color2) {
   const rgb1 = hexToRgb(color1);
@@ -43,8 +68,11 @@ function getContrastRatio(color1, color2) {
   
   if (!rgb1 || !rgb2) return null;
   
+  // Assume color1 is background and color2 is foreground for blending
+  const blendedRgb2 = blendColors(rgb2, rgb1);
+  
   const lum1 = getLuminance(rgb1);
-  const lum2 = getLuminance(rgb2);
+  const lum2 = getLuminance(blendedRgb2);
   
   const brightest = Math.max(lum1, lum2);
   const darkest = Math.min(lum1, lum2);
@@ -139,7 +167,11 @@ function testThemeContrast(themePath) {
         const contrast = getContrastRatio(test.bg, test.fg);
         if (contrast) {
           console.log(`    ${test.name}: ${contrast.toFixed(2)} (${contrast >= MIN_CONTRAST_RATIO ? '✓' : '✗'})`);
+        } else {
+          console.log(`    ${test.name}: Invalid color format - unable to calculate contrast`);
         }
+      } else if (test.bg || test.fg) {
+        console.log(`    ${test.name}: Missing ${!test.bg ? 'background' : 'foreground'} color`);
       }
     }
     
