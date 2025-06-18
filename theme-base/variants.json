@@ -3,19 +3,22 @@
     "name": "Gruvbox Crisp (Soft, with TeX)",
     "type": "dark",
     "background": "#32302f",
-    "backgroundTransparent": "#32302f00"
+    "backgroundTransparent": "#32302f00",
+    "fileName": "gruvbox-crisp-soft.json"
   },
   "gruvbox-crisp-medium": {
     "name": "Gruvbox Crisp (Medium, with TeX)",
     "type": "dark",
     "background": "#282828",
-    "backgroundTransparent": "#28282800"
+    "backgroundTransparent": "#28282800",
+    "fileName": "gruvbox-crisp-medium.json"
   },
   "gruvbox-crisp-high-contrast": {
     "name": "Gruvbox Crisp (High Contrast, with TeX)",
     "type": "dark",
     "background": "#1d2021",
     "backgroundTransparent": "#1d202100",
+    "fileName": "gruvbox-crisp-high-contrast.json",
     "additionalColors": {
       "editorLineNumber.activeForeground": "#fe8019"
     }
@@ -25,6 +28,7 @@
     "type": "dark",
     "background": "#1a1a1a",
     "backgroundTransparent": "#1a1a1a00",
+    "fileName": "gruvbox-crisp-purple.json",
     "additionalColors": {
       "sideBar.background": "#141414",
       "activityBar.background": "#141414"
@@ -35,6 +39,7 @@
     "type": "dark",
     "background": "#141414",
     "backgroundTransparent": "#14141400",
+    "fileName": "gruvbox-crisp-high-contrast-purple.json",
     "additionalColors": {
       "sideBar.background": "#0d0d0d",
       "activityBar.background": "#0d0d0d",
