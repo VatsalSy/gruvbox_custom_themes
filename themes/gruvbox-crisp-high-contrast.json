@@ -1091,7 +1091,7 @@
     "listFilterWidget.outline": "#504945",
     "minimap.errorHighlight": "#fb493480",
     "minimap.findMatchHighlight": "#fabd2f60",
-    "minimap.selectionHighlight": "#66565480",
+    "minimap.selectionHighlight": "#665c5480",
     "minimap.warningHighlight": "#d7992180",
     "minimapGutter.addedBackground": "#b8bb2680",
     "minimapGutter.deletedBackground": "#fb493480",
