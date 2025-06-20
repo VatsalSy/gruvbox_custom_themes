@@ -45,13 +45,13 @@
       {
         "label": "Gruvbox Crisp Anysphere Blend",
         "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-crisp-purple.json",
+        "path": "./themes/gruvbox-crisp-anysphere.json",
         "semanticHighlighting": true
       },
       {
-        "label": "Gruvbox Crisp Anysphere Blend (High Contrast)",
+        "label": "Gruvbox Crisp Anysphere (High Contrast)",
         "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-crisp-high-contrast-purple.json",
+        "path": "./themes/gruvbox-crisp-anysphere-high-contrast.json",
         "semanticHighlighting": true
       }
     ]

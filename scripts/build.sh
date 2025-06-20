@@ -81,8 +81,9 @@ if [ "$1" == "--package" ]; then
     info "Creating VSIX package..."
     vsce package
     
-    VSIX_FILE=$(ls *.vsix 2>/dev/null | head -n 1)
-    if [ -n "$VSIX_FILE" ]; then
+    VSIX_FILES=(*.vsix)
+    VSIX_FILE="${VSIX_FILES[0]}"
+    if [ -f "$VSIX_FILE" ]; then
         success "Extension packaged successfully: $VSIX_FILE"
         
         # Show package info

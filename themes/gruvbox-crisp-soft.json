@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/vscode/master/extensions/theme-colorful-defaults/schemas/color-theme.schema.json",
+  "$schema": "vscode://schemas/color-theme",
   "name": "Gruvbox Crisp (Soft, with TeX)",
   "type": "dark",
   "tokenColors": [
@@ -1025,7 +1025,7 @@
     "editor.selectionHighlightBackground": "#665c5450",
     "editor.wordHighlightBackground": "#665c5450",
     "editor.wordHighlightStrongBackground": "#665c5470",
-    "editorActiveLineNumber.foreground": "#fabd2f",
+    "editorLineNumber.activeForeground": "#fabd2f",
     "editorBracketHighlight.foreground1": "#fb4934",
     "editorBracketHighlight.foreground2": "#fabd2f",
     "editorBracketHighlight.foreground3": "#d3869b",

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/vscode/master/extensions/theme-colorful-defaults/schemas/color-theme.schema.json",
+  "$schema": "vscode://schemas/color-theme",
   "name": "Gruvbox Crisp Anysphere Blend",
   "type": "dark",
   "tokenColors": [
@@ -43,7 +43,7 @@
         "constant.language"
       ],
       "settings": {
-        "foreground": "#b48ead"
+        "foreground": "#A35DB0"
       }
     },
     {
@@ -76,7 +76,7 @@
         "variable.language.super.constructor"
       ],
       "settings": {
-        "foreground": "#8ec07c"
+        "foreground": "#A35DB0"
       }
     },
     {
@@ -1014,7 +1014,7 @@
   ],
   "colors": {
     "badge.background": "#d65d0e",
-    "button.background": "#665c54",
+    "button.background": "#68236D",
     "dropdown.border": "#3c3836",
     "editor.findMatchBackground": "#fabd2f40",
     "editor.findMatchHighlightBackground": "#d7992140",
@@ -1025,7 +1025,7 @@
     "editor.selectionHighlightBackground": "#665c5450",
     "editor.wordHighlightBackground": "#665c5450",
     "editor.wordHighlightStrongBackground": "#665c5470",
-    "editorActiveLineNumber.foreground": "#fabd2f",
+    "editorLineNumber.activeForeground": "#fabd2f",
     "editorBracketHighlight.foreground1": "#fb4934",
     "editorBracketHighlight.foreground2": "#fabd2f",
     "editorBracketHighlight.foreground3": "#d3869b",
@@ -1062,7 +1062,7 @@
     "editorWarning.foreground": "#d79921",
     "editorWhitespace.foreground": "#3c3836",
     "editorWidget.border": "#3c3836",
-    "focusBorder": "#504945",
+    "focusBorder": "#A35DB0",
     "foreground": "#fbf1c7",
     "gitDecoration.addedResourceForeground": "#b8bb26",
     "gitDecoration.conflictingResourceForeground": "#d3869b",
@@ -1117,7 +1117,7 @@
     "peekViewTitleLabel.foreground": "#fbf1c7",
     "pickerGroup.border": "#3c3836",
     "pickerGroup.foreground": "#a89984",
-    "progressBar.background": "#fe8019",
+    "progressBar.background": "#A35DB0",
     "scrollbar.shadow": "#1a1a1a",
     "scrollbarSlider.activeBackground": "#7c6f6450",
     "scrollbarSlider.background": "#50494540",
@@ -1191,8 +1191,8 @@
     "textBlockQuote.background": "#3c3836",
     "textBlockQuote.border": "#504945",
     "textCodeBlock.background": "#3c3836",
-    "textLink.activeForeground": "#83a598",
-    "textLink.foreground": "#83a598",
+    "textLink.activeForeground": "#B48EAD",
+    "textLink.foreground": "#A35DB0",
     "textPreformat.foreground": "#fabd2f",
     "textSeparator.foreground": "#504945",
     "titleBar.activeForeground": "#fbf1c7",
@@ -1223,7 +1223,8 @@
     "editorBracketMatch.border": "#1a1a1a00",
     "merge.border": "#1a1a1a00",
     "statusBar.debuggingBorder": "#1a1a1a00",
-    "statusBar.noFolderBorder": "#1a1a1a00"
+    "statusBar.noFolderBorder": "#1a1a1a00",
+    "button.hoverBackground": "#7A2A80"
   },
   "semanticTokenColors": {
     "constant.builtin": "#d3869b",
@@ -1237,11 +1238,11 @@
     "function.builtin": "#fe8019",
     "method": "#b8bb26",
     "component": "#8ec07c",
-    "type": "#fabd2f",
-    "class": "#fabd2f",
-    "interface": "#fabd2f",
+    "type": "#A35DB0",
+    "class": "#A35DB0",
+    "interface": "#A35DB0",
     "enum": "#fabd2f",
     "enumMember": "#d3869b",
-    "namespace": "#fabd2f"
+    "namespace": "#B48EAD"
   }
 }

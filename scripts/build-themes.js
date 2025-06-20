@@ -12,12 +12,12 @@ const packageJson = JSON.parse(fs.readFileSync(PACKAGE_JSON_PATH, 'utf8'));
 
 function generateTheme(variantConfig) {
   const theme = {
-    $schema: "https://raw.githubusercontent.com/microsoft/vscode/master/extensions/theme-colorful-defaults/schemas/color-theme.schema.json",
+    $schema: "vscode://schemas/color-theme",
     name: variantConfig.name,
     type: variantConfig.type,
-    tokenColors: baseTokens.tokenColors,
+    tokenColors: baseTokens.tokenColors.map(token => ({...token})),
     colors: {},
-    semanticTokenColors: baseTokens.semanticTokenColors
+    semanticTokenColors: {...baseTokens.semanticTokenColors}
   };
 
   const backgroundColors = {
@@ -61,6 +61,26 @@ function generateTheme(variantConfig) {
 
   const additionalColors = variantConfig.additionalColors || {};
   theme.colors = { ...theme.colors, ...additionalColors };
+
+  // Apply token color overrides if specified
+  if (variantConfig.tokenColorOverrides) {
+    for (const [scope, color] of Object.entries(variantConfig.tokenColorOverrides)) {
+      const tokenIndex = theme.tokenColors.findIndex(token => 
+        token.scope && token.scope.includes(scope)
+      );
+      if (tokenIndex !== -1) {
+        theme.tokenColors[tokenIndex].settings.foreground = color;
+      }
+    }
+  }
+
+  // Apply semantic token color overrides if specified
+  if (variantConfig.semanticTokenColorOverrides) {
+    theme.semanticTokenColors = {
+      ...theme.semanticTokenColors,
+      ...variantConfig.semanticTokenColorOverrides
+    };
+  }
 
   return theme;
 }

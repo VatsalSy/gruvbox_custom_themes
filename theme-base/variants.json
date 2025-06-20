@@ -23,27 +23,68 @@
       "editorLineNumber.activeForeground": "#fe8019"
     }
   },
-  "gruvbox-crisp-purple": {
+  "gruvbox-crisp-anysphere": {
     "name": "Gruvbox Crisp Anysphere Blend",
     "type": "dark",
     "background": "#1a1a1a",
     "backgroundTransparent": "#1a1a1a00",
-    "fileName": "gruvbox-crisp-purple.json",
+    "fileName": "gruvbox-crisp-anysphere.json",
     "additionalColors": {
       "sideBar.background": "#141414",
-      "activityBar.background": "#141414"
+      "activityBar.background": "#141414",
+      "button.background": "#68236D",
+      "button.hoverBackground": "#7A2A80",
+      "progressBar.background": "#A35DB0",
+      "focusBorder": "#A35DB0",
+      "textLink.foreground": "#A35DB0",
+      "textLink.activeForeground": "#B48EAD"
+    },
+    "tokenColorOverrides": {
+      "constant.numeric": "#A35DB0",
+      "entity.name.type": "#A35DB0",
+      "entity.name.class": "#A35DB0",
+      "support.class": "#A35DB0",
+      "entity.name.function.decorator": "#68236D",
+      "meta.decorator": "#68236D"
+    },
+    "semanticTokenColorOverrides": {
+      "type": "#A35DB0",
+      "class": "#A35DB0",
+      "interface": "#A35DB0",
+      "namespace": "#B48EAD"
     }
   },
-  "gruvbox-crisp-high-contrast-purple": {
-    "name": "Gruvbox Crisp Anysphere Blend (High Contrast)",
+  "gruvbox-crisp-anysphere-high-contrast": {
+    "name": "Gruvbox Crisp Anysphere (High Contrast)",
     "type": "dark",
     "background": "#141414",
     "backgroundTransparent": "#14141400",
-    "fileName": "gruvbox-crisp-high-contrast-purple.json",
+    "fileName": "gruvbox-crisp-anysphere-high-contrast.json",
     "additionalColors": {
-      "sideBar.background": "#0d0d0d",
+      "sideBar.background": "#141414",
       "activityBar.background": "#0d0d0d",
-      "editorLineNumber.activeForeground": "#B48EAD"
+      "button.background": "#68236D",
+      "button.hoverBackground": "#7A2A80",
+      "progressBar.background": "#A35DB0",
+      "focusBorder": "#A35DB0",
+      "textLink.foreground": "#A35DB0",
+      "textLink.activeForeground": "#B48EAD",
+      "tab.activeBorder": "#A35DB0",
+      "panelTitle.activeBorder": "#A35DB0"
+    },
+    "tokenColorOverrides": {
+      "constant.numeric": "#A35DB0",
+      "entity.name.type": "#A35DB0",
+      "entity.name.class": "#A35DB0",
+      "support.class": "#A35DB0",
+      "entity.name.function.decorator": "#68236D",
+      "meta.decorator": "#68236D"
+    },
+    "semanticTokenColorOverrides": {
+      "type": "#A35DB0",
+      "class": "#A35DB0",
+      "interface": "#A35DB0",
+      "namespace": "#B48EAD"
     }
   }
 }
