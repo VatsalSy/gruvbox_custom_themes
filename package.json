@@ -71,6 +71,8 @@
   "scripts": {
     "build": "node scripts/build-themes.js",
     "prebuild": "echo 'Building theme variants from base configuration...'",
-    "postbuild": "echo 'Theme generation complete!'"
+    "postbuild": "echo 'Theme generation complete!'",
+    "lint": "sh scripts/runLint.sh",
+    "test": "sh scripts/runTest.sh"
   }
 }
