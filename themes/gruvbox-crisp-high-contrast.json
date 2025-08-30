@@ -1242,6 +1242,7 @@
     "interface": "#fabd2f",
     "enum": "#fabd2f",
     "enumMember": "#d3869b",
-    "namespace": "#fabd2f"
+    "namespace": "#fabd2f",
+    "typeParameter": "#fabd2f"
   }
 }

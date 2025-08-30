@@ -1238,11 +1238,12 @@
     "function.builtin": "#fe8019",
     "method": "#b8bb26",
     "component": "#8ec07c",
-    "type": "#A35DB0",
-    "class": "#A35DB0",
-    "interface": "#A35DB0",
+    "type": "#a35db0",
+    "class": "#a35db0",
+    "interface": "#a35db0",
     "enum": "#fabd2f",
     "enumMember": "#d3869b",
-    "namespace": "#B48EAD"
+    "namespace": "#b48ead",
+    "typeParameter": "#a35db0"
   }
 }

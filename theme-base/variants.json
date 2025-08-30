@@ -48,10 +48,11 @@
       "meta.decorator": "#68236D"
     },
     "semanticTokenColorOverrides": {
-      "type": "#A35DB0",
-      "class": "#A35DB0",
-      "interface": "#A35DB0",
-      "namespace": "#B48EAD"
+      "type": "#a35db0",
+      "class": "#a35db0",
+      "interface": "#a35db0",
+      "namespace": "#b48ead",
+      "typeParameter": "#a35db0"
     }
   },
   "gruvbox-crisp-anysphere-high-contrast": {
@@ -81,10 +82,11 @@
       "meta.decorator": "#68236D"
     },
     "semanticTokenColorOverrides": {
-      "type": "#A35DB0",
-      "class": "#A35DB0",
-      "interface": "#A35DB0",
-      "namespace": "#B48EAD"
+      "type": "#a35db0",
+      "class": "#a35db0",
+      "interface": "#a35db0",
+      "namespace": "#b48ead",
+      "typeParameter": "#a35db0"
     }
   }
 }

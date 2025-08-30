@@ -65,9 +65,16 @@ function generateTheme(variantConfig) {
   // Apply token color overrides if specified
   if (variantConfig.tokenColorOverrides) {
     for (const [scope, color] of Object.entries(variantConfig.tokenColorOverrides)) {
-      const tokenIndex = theme.tokenColors.findIndex(token => 
-        token.scope && token.scope.includes(scope)
-      );
+      const tokenIndex = theme.tokenColors.findIndex(token => {
+        if (!token) return false;
+        const raw = token.scope;
+        const scopes = Array.isArray(raw)
+          ? raw
+          : typeof raw === 'string'
+            ? raw.split(',').map(s => s.trim()).filter(Boolean)
+            : [];
+        return scopes.includes(scope);
+      });
       if (tokenIndex !== -1) {
         theme.tokenColors[tokenIndex].settings.foreground = color;
       }
