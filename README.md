@@ -1,9 +1,9 @@
 # Gruvbox Crisp Color Theme Collection
 
-[![Version](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes)](https://github.com/vatsalsy/gruvbox_custom_themes/releases)
-[![License](https://img.shields.io/github/license/vatsalsy/gruvbox_custom_themes)](LICENSE)
-[![Download VSIX](https://img.shields.io/github/v/release/vatsalsy/gruvbox_custom_themes?label=download%20VSIX&color=blue)](https://github.com/VatsalSy/gruvbox_custom_themes/raw/refs/heads/main/gruvbox-crisp-tex-1.1.6.vsix)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vatsalsy/gruvbox_custom_themes/publish.yml?label=publish)](https://github.com/vatsalsy/gruvbox_custom_themes/actions)<br>
+[![Version](https://img.shields.io/github/v/release/VatsalSy/gruvbox_custom_themes)](https://github.com/VatsalSy/gruvbox_custom_themes/releases)
+[![License](https://img.shields.io/github/license/VatsalSy/gruvbox_custom_themes)](LICENSE)
+[![Download VSIX](https://img.shields.io/github/v/release/VatsalSy/gruvbox_custom_themes?label=download%20VSIX&color=blue)](https://github.com/VatsalSy/gruvbox_custom_themes/releases/latest)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/VatsalSy/gruvbox_custom_themes/publish.yml?label=publish)](https://github.com/VatsalSy/gruvbox_custom_themes/actions)<br>
 [![VS Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/vatsalsy.gruvbox-crisp-tex?label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)
 [![VS Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/vatsalsy.gruvbox-crisp-tex?label=rating)](https://marketplace.visualstudio.com/items?itemName=vatsalsy.gruvbox-crisp-tex)<br>
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/vatsalsy/gruvbox-crisp-tex?label=Open%20VSX)](https://open-vsx.org/extension/vatsalsy/gruvbox-crisp-tex)<br>
@@ -22,7 +22,7 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 - Adjusted UI element colors for clearer visual hierarchy
 - Optimized terminal colors for better visibility
 - Refined bracket pair colorization
-- Added comprehensive LaTeX support with specialized syntax highlighting
+- Added comprehensive LaTeX support with specialized syntax highlighting (all variants)
 
 ## Features
 
@@ -43,11 +43,74 @@ This theme collection is based on the excellent [Gruvbox Theme by jdinhify](http
 
 ### From GitHub
 
-1. Clone the repository: `git clone https://github.com/vatsalsy/gruvbox_custom_themes.git`
+1. Clone the repository: `git clone https://github.com/VatsalSy/gruvbox_custom_themes.git`
 2. Open VSCode
 3. Go to Extensions (Ctrl+Shift+X / Cmd+Shift+X)
 4. Click "Install from VSIX..."
 5. Select the `.vsix` file from the cloned repository
+
+## Building from Source
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (comes with Node.js)
+
+### Build Process
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/VatsalSy/gruvbox_custom_themes.git
+   cd gruvbox_custom_themes
+   ```
+
+2. Run the build script:
+
+   ```bash
+   ./scripts/build.sh
+   ```
+
+   This will:
+   - Check for required dependencies
+   - Generate theme JSON files from base configurations
+   - List all generated themes
+
+3. To create a `.vsix` package for distribution:
+
+   ```bash
+   ./scripts/build.sh --package
+   ```
+
+   This will additionally:
+   - Package the extension into a `.vsix` file
+   - Display the package size and filename
+
+### Manual Build Steps
+
+If you prefer to run the build steps manually:
+
+1. Generate theme files:
+
+   ```bash
+   npm run build
+   # or
+   node scripts/build-themes.js
+   ```
+
+2. Package the extension (requires VSCE):
+
+   ```bash
+   npm install -g @vscode/vsce
+   npx @vscode/vsce package
+   ```
+
+### Development
+
+To test your changes locally:
+1. Open the project in VSCode
+2. Press `F5` to launch the Extension Development Host
+3. The extension will be loaded in a new VSCode window for testing
 
 ## Theme Variants
 
@@ -103,7 +166,7 @@ Enhanced syntax highlighting for:
 - JSON
 - Markdown
 - Shell scripts
-- LaTeX (with specialized math, environment, and reference highlighting)
+- LaTeX/TeX (with specialized math, environment, and reference highlighting in all theme variants)
 - And more...
 
 ## Customization
@@ -123,9 +186,17 @@ To customize the theme, you can override settings in your `settings.json`:
 }
 ```
 
+## Changelog
+
+For the complete changelog with detailed version history, see [CHANGELOG.md](CHANGELOG.md).
+
 ## Contributing
 
 Feel free to open issues or submit pull requests on GitHub.
+
+## Color Palette Reference
+
+For the full palettes and contrast guidelines, see docs/color-palette.md.
 
 ## License
 

@@ -3,7 +3,7 @@
   "publisher": "vatsalsy",
   "displayName": "Gruvbox Crisp Color Theme Collection",
   "description": "A collection of high-contrast themes based on Gruvbox with clear foregrounds",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -27,40 +27,52 @@
       {
         "label": "Gruvbox Crisp (High Contrast, with TeX)",
         "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-crisp-high-contrast.json"
+        "path": "./themes/gruvbox-crisp-high-contrast.json",
+        "semanticHighlighting": true
       },
       {
         "label": "Gruvbox Crisp (Medium, with TeX)",
         "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-crisp-medium.json"
+        "path": "./themes/gruvbox-crisp-medium.json",
+        "semanticHighlighting": true
       },
       {
         "label": "Gruvbox Crisp (Soft, with TeX)",
         "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-crisp-soft.json"
+        "path": "./themes/gruvbox-crisp-soft.json",
+        "semanticHighlighting": true
       },
       {
         "label": "Gruvbox Crisp Anysphere Blend",
         "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-crisp-purple.json"
+        "path": "./themes/gruvbox-crisp-anysphere.json",
+        "semanticHighlighting": true
       },
       {
-        "label": "Gruvbox Crisp Anysphere Blend (High Contrast)",
+        "label": "Gruvbox Crisp Anysphere (High Contrast)",
         "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-crisp-high-contrast-purple.json"
+        "path": "./themes/gruvbox-crisp-anysphere-high-contrast.json",
+        "semanticHighlighting": true
       }
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/VatsalSy/gruvbox-crisp-tex"
+    "url": "https://github.com/VatsalSy/gruvbox_custom_themes"
   },
   "bugs": {
-    "url": "https://github.com/VatsalSy/gruvbox-crisp-tex/issues"
+    "url": "https://github.com/VatsalSy/gruvbox_custom_themes/issues"
   },
   "author": {
     "name": "Vatsal"
   },
   "license": "MIT",
-  "homepage": "https://github.com/VatsalSy/gruvbox-crisp-tex#readme"
+  "homepage": "https://github.com/VatsalSy/gruvbox_custom_themes#readme",
+  "scripts": {
+    "build": "node scripts/build-themes.js",
+    "prebuild": "echo 'Building theme variants from base configuration...'",
+    "postbuild": "echo 'Theme generation complete!'",
+    "lint": "sh scripts/runLint.sh",
+    "test": "sh scripts/runTest.sh"
+  }
 }

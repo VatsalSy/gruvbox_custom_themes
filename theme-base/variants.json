@@ -1,0 +1,92 @@
+{
+  "gruvbox-crisp-soft": {
+    "name": "Gruvbox Crisp (Soft, with TeX)",
+    "type": "dark",
+    "background": "#32302f",
+    "backgroundTransparent": "#32302f00",
+    "fileName": "gruvbox-crisp-soft.json"
+  },
+  "gruvbox-crisp-medium": {
+    "name": "Gruvbox Crisp (Medium, with TeX)",
+    "type": "dark",
+    "background": "#282828",
+    "backgroundTransparent": "#28282800",
+    "fileName": "gruvbox-crisp-medium.json"
+  },
+  "gruvbox-crisp-high-contrast": {
+    "name": "Gruvbox Crisp (High Contrast, with TeX)",
+    "type": "dark",
+    "background": "#1d2021",
+    "backgroundTransparent": "#1d202100",
+    "fileName": "gruvbox-crisp-high-contrast.json",
+    "additionalColors": {
+      "editorLineNumber.activeForeground": "#fe8019"
+    }
+  },
+  "gruvbox-crisp-anysphere": {
+    "name": "Gruvbox Crisp Anysphere Blend",
+    "type": "dark",
+    "background": "#1a1a1a",
+    "backgroundTransparent": "#1a1a1a00",
+    "fileName": "gruvbox-crisp-anysphere.json",
+    "additionalColors": {
+      "sideBar.background": "#141414",
+      "activityBar.background": "#141414",
+      "button.background": "#68236D",
+      "button.hoverBackground": "#7A2A80",
+      "progressBar.background": "#A35DB0",
+      "focusBorder": "#A35DB0",
+      "textLink.foreground": "#A35DB0",
+      "textLink.activeForeground": "#B48EAD"
+    },
+    "tokenColorOverrides": {
+      "constant.numeric": "#A35DB0",
+      "entity.name.type": "#A35DB0",
+      "entity.name.class": "#A35DB0",
+      "support.class": "#A35DB0",
+      "entity.name.function.decorator": "#68236D",
+      "meta.decorator": "#68236D"
+    },
+    "semanticTokenColorOverrides": {
+      "type": "#a35db0",
+      "class": "#a35db0",
+      "interface": "#a35db0",
+      "namespace": "#b48ead",
+      "typeParameter": "#a35db0"
+    }
+  },
+  "gruvbox-crisp-anysphere-high-contrast": {
+    "name": "Gruvbox Crisp Anysphere (High Contrast)",
+    "type": "dark",
+    "background": "#141414",
+    "backgroundTransparent": "#14141400",
+    "fileName": "gruvbox-crisp-anysphere-high-contrast.json",
+    "additionalColors": {
+      "sideBar.background": "#141414",
+      "activityBar.background": "#0d0d0d",
+      "button.background": "#68236D",
+      "button.hoverBackground": "#7A2A80",
+      "progressBar.background": "#A35DB0",
+      "focusBorder": "#A35DB0",
+      "textLink.foreground": "#A35DB0",
+      "textLink.activeForeground": "#B48EAD",
+      "tab.activeBorder": "#A35DB0",
+      "panelTitle.activeBorder": "#A35DB0"
+    },
+    "tokenColorOverrides": {
+      "constant.numeric": "#A35DB0",
+      "entity.name.type": "#A35DB0",
+      "entity.name.class": "#A35DB0",
+      "support.class": "#A35DB0",
+      "entity.name.function.decorator": "#68236D",
+      "meta.decorator": "#68236D"
+    },
+    "semanticTokenColorOverrides": {
+      "type": "#a35db0",
+      "class": "#a35db0",
+      "interface": "#a35db0",
+      "namespace": "#b48ead",
+      "typeParameter": "#a35db0"
+    }
+  }
+}
