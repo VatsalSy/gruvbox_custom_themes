@@ -5,6 +5,31 @@ All notable changes to the Gruvbox Crisp Color Theme Collection will be document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-01-06
+
+### Added
+
+- Two new Anysphere Blend theme variants:
+  - Gruvbox Crisp Anysphere Blend (standard)
+  - Gruvbox Crisp Anysphere (High Contrast)
+- Automated theme generation system from base configuration files
+- Comprehensive test suite for theme validation and color contrast testing
+- Build scripts for theme generation and quality assurance
+- Consolidated color palette documentation
+
+### Changed
+
+- Complete theme architecture overhaul with base configuration system
+- Improved build system with automated theme variant generation
+- Enhanced documentation with consolidated theme information
+- All themes now generated from unified base configuration for consistency
+
+### Fixed
+
+- Semantic token color definitions across all theme variants
+- Theme file structure and organization consistency
+- Color palette standardization across all variants
+
 ## [1.1.8] - 2025-01-06
 
 ### Added
