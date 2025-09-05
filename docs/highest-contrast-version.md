@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Highest Contrast, pop** variant is designed for maximum visual impact and monitors requiring extreme contrast. This theme prioritizes ultra-high readability through stark contrasts paired with vibrant, saturated colors inspired by the Dracula color palette.
+The **Highest Contrast, pop** variant is designed for maximum visual impact and monitors requiring extreme contrast. This theme prioritizes ultra-high readability through stark contrasts paired with vibrant, saturated colors inspired by the Dracula color palette. Note: This variant intentionally diverges from the traditional Gruvbox palette to achieve its distinctive high-contrast "pop" aesthetic.
 
 ## Design Philosophy
 
@@ -103,22 +103,24 @@ The **Highest Contrast, pop** variant is designed for maximum visual impact and 
 
 ## Contrast Ratios
 
-All color combinations meet or exceed WCAG AAA standards:
+Most color combinations meet or exceed WCAG AAA standards:
 
-- **White on Black**: 21:1 (Maximum possible contrast)
-- **Bright Colors on Black**: 8:1 to 15:1 (Excellent readability)
-- **Comments on Black**: 5.5:1 (Readable while subdued)
+- **White on Black**: 21:1 (WCAG AAA - Maximum possible contrast)
+- **Bright Colors on Black**: 8:1 to 15:1 (WCAG AAA - Excellent readability)
+- **Comments on Black**: 5.5:1 (WCAG AA - Readable while subdued)
 - **Selection Highlight**: Translucent overlay maintains text readability
 
 ## Usage Recommendations
 
-### Ideal For:
+### Ideal For
+
 - Monitors with poor contrast capabilities
 - Users requiring maximum visual distinction
 - High ambient light environments
 - Extended coding sessions requiring clear element distinction
 
-### Considerations:
+### Considerations
+
 - Pure black (#000000) may cause eye strain on OLED displays
 - Some users may find the high saturation levels intense
 - The vibrant colors are optimized for dark environments
@@ -129,7 +131,7 @@ This theme variant is generated from base configurations with the following spec
 
 1. **Pure black editor background** for maximum contrast
 2. **Sidebar differentiation** using #0a0a0a for visual hierarchy
-3. **Removed selection foreground** to allow VSCode/Cursor auto-calculation
+3. **Removed selection foreground** to allow VS Code/Cursor auto-calculation
 4. **Enhanced hover states** for better navigation
 5. **Fixed terminal black** color for ANSI text visibility
 
@@ -145,4 +147,4 @@ This theme variant is generated from base configurations with the following spec
 
 ## Installation Note
 
-This theme is included in the Gruvbox Crisp Color Theme Collection. After installation, select "Gruvbox Crisp Anysphere (Highest Contrast, pop)" from the color theme picker in VSCode or Cursor.
+This theme is included in the Gruvbox Crisp Color Theme Collection. After installation, select "Gruvbox Crisp Anysphere (Highest Contrast, pop)" from the color theme picker in VS Code or Cursor.

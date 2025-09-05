@@ -114,7 +114,7 @@ To test your changes locally:
 
 ## Theme Variants
 
-This collection includes five variants of the Gruvbox Dark theme:
+This collection includes six variants of the Gruvbox Dark theme:
 
 1. **High Contrast (Hard)** - Uses the darkest background (#1d2021) for maximum contrast
 2. **Medium** - Uses a balanced background (#282828) for comfortable viewing
