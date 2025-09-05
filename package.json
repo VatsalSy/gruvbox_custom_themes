@@ -53,6 +53,12 @@
         "uiTheme": "vs-dark",
         "path": "./themes/gruvbox-crisp-anysphere-high-contrast.json",
         "semanticHighlighting": true
+      },
+      {
+        "label": "Gruvbox Crisp Anysphere (Highest Contrast, pop)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-crisp-anysphere-contrast-pop.json",
+        "semanticHighlighting": true
       }
     ]
   },
