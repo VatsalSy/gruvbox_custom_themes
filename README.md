@@ -114,12 +114,14 @@ To test your changes locally:
 
 ## Theme Variants
 
-This collection includes four variants of the Gruvbox Dark theme:
+This collection includes five variants of the Gruvbox Dark theme:
 
 1. **High Contrast (Hard)** - Uses the darkest background (#1d2021) for maximum contrast
 2. **Medium** - Uses a balanced background (#282828) for comfortable viewing
 3. **Soft** - Uses a softer background (#32302f) for reduced eye strain
 4. **Anysphere Blend** - A fusion of Gruvbox structure with Cursor Dark Anysphere colors
+5. **Anysphere (High Contrast)** - Darker Anysphere variant with enhanced contrast
+6. **Anysphere (Highest Contrast, pop)** - Pure black variant for maximum visual impact
 
 All variants maintain the same high-quality syntax highlighting and specialized language support, differing in their background intensity and color schemes.
 
@@ -139,6 +141,23 @@ The newest addition to the collection, **Gruvbox Crisp Anysphere Blend**, combin
 - **Consistent Experience**: Terminal colors and UI elements are harmonized with the editor theme
 
 This variant provides a perfect blend for users who appreciate Gruvbox's token organization but prefer a more modern aesthetic inspired by Cursor's design language. The custom purple (#A35DB0) is one of the most distinctive features, used for constants, prototype objects, and other special language elements.
+
+## Gruvbox Crisp Anysphere (Highest Contrast, pop)
+
+The **Highest Contrast, pop** variant is designed for maximum visual impact and monitors requiring extreme contrast:
+
+- **Pure Black Background**: Uses true black (#000000) for the editor to achieve maximum contrast
+- **Vibrant "Pop" Colors**: Features a Dracula-inspired palette with highly saturated, distinctive colors:
+  - Comments: #6272a4 (muted blue-gray for reduced distraction)
+  - Strings: #50fa7b (bright green)
+  - Keywords: #f1fa8c (pale yellow)
+  - Functions: #ff79c6 (hot pink)
+  - Numbers: #bd93f9 (bright purple)
+  - Types: #8be9fd (bright cyan)
+- **Visual Hierarchy**: Subtle variation with sidebars using #0a0a0a while editor remains pure black
+- **Enhanced Navigation**: Includes hover highlights for better code exploration
+
+**Note**: This variant uses pure black (#000000) specifically for monitors that need extreme contrast and maximum "pop" effect. Some users may find pure black causes eye strain on OLED displays - in such cases, consider using the standard High Contrast variants instead.
 
 ## Color Palette (Original Gruvbox Variants)
 
