@@ -120,8 +120,8 @@ This collection includes six variants of the Gruvbox Dark theme:
 2. **Medium** - Uses a balanced background (#282828) for comfortable viewing
 3. **Soft** - Uses a softer background (#32302f) for reduced eye strain
 4. **Anysphere Blend** - A fusion of Gruvbox structure with Cursor Dark Anysphere colors
-5. **Anysphere (High Contrast)** - Darker Anysphere variant with enhanced contrast
-6. **Anysphere (Highest Contrast, pop)** - Pure black variant for maximum visual impact
+5. **Gruvbox Crisp Anysphere (High Contrast)** - Darker Anysphere variant with enhanced contrast
+6. **Gruvbox Crisp Anysphere (Highest Contrast, pop)** - Pure black variant for maximum visual impact
 
 All variants maintain the same high-quality syntax highlighting and specialized language support, differing in their background intensity and color schemes.
 
@@ -143,6 +143,8 @@ The newest addition to the collection, **Gruvbox Crisp Anysphere Blend**, combin
 This variant provides a perfect blend for users who appreciate Gruvbox's token organization but prefer a more modern aesthetic inspired by Cursor's design language. The custom purple (#A35DB0) is one of the most distinctive features, used for constants, prototype objects, and other special language elements.
 
 ## Gruvbox Crisp Anysphere (Highest Contrast, pop)
+
+Note: this variant intentionally diverges from the classic Gruvbox palette — see the full variant docs at docs/highest-contrast-version.md.
 
 The **Highest Contrast, pop** variant is designed for maximum visual impact and monitors requiring extreme contrast:
 

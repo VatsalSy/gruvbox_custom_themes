@@ -73,6 +73,8 @@ The **Highest Contrast, pop** variant is designed for maximum visual impact and 
 
 *Note: terminal.ansiBlack is set to #212121 instead of pure black to ensure black ANSI text remains visible against the black background.*
 
+*Footnote (ANSI Bright Black): Using #6272a4 for “bright black” is intentional to improve readability of comments and dim text, but it diverges from common terminal semantics where bright black is a lighter gray. Some CLI tools/themes may assume a gray tone for this slot; if you prefer standard behavior, substitute #4d4d4d for ANSI bright black.*
+
 ### Diff & Version Control Colors
 
 | Element | Color | Hex | Purpose |
