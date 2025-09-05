@@ -5,6 +5,21 @@ All notable changes to the Gruvbox Crisp Color Theme Collection will be document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-09-05
+
+### Added
+
+- New theme variant: **Gruvbox Crisp Anysphere (Highest Contrast, pop)**
+  - Pure black background (`#000000`) with bright near‑white foreground (`#ffffff`)
+  - Purple‑forward accents (focus/links `#bd93f9`, buttons/cursor `#9b4fa0`)
+  - Vibrant “pop” syntax palette (functions `#ff79c6`, keywords `#f1fa8c`, strings `#50fa7b`, numbers `#bd93f9`, types `#8be9fd`)
+  - Readability improvements for comments/inlay hints using blue‑gray `#6272a4`
+  - Terminal ANSI palette aligned to Ghostty/tmux pop scheme
+
+### Notes
+
+- This release adds features without removing or changing existing variants; it is a minor version bump per SemVer.
+
 ## [1.2.0] - 2025-01-06
 
 ### Added
