@@ -32,20 +32,20 @@
     "additionalColors": {
       "sideBar.background": "#141414",
       "activityBar.background": "#141414",
-      "button.background": "#68236D",
-      "button.hoverBackground": "#7A2A80",
-      "progressBar.background": "#A35DB0",
-      "focusBorder": "#A35DB0",
-      "textLink.foreground": "#A35DB0",
-      "textLink.activeForeground": "#B48EAD"
+      "button.background": "#68236d",
+      "button.hoverBackground": "#7a2a80",
+      "progressBar.background": "#a35db0",
+      "focusBorder": "#a35db0",
+      "textLink.foreground": "#a35db0",
+      "textLink.activeForeground": "#b48ead"
     },
     "tokenColorOverrides": {
-      "constant.numeric": "#A35DB0",
-      "entity.name.type": "#A35DB0",
-      "entity.name.class": "#A35DB0",
-      "support.class": "#A35DB0",
-      "entity.name.function.decorator": "#68236D",
-      "meta.decorator": "#68236D"
+      "constant.numeric": "#a35db0",
+      "entity.name.type": "#a35db0",
+      "entity.name.class": "#a35db0",
+      "support.class": "#a35db0",
+      "entity.name.function.decorator": "#68236d",
+      "meta.decorator": "#68236d"
     },
     "semanticTokenColorOverrides": {
       "type": "#a35db0",
@@ -64,22 +64,22 @@
     "additionalColors": {
       "sideBar.background": "#141414",
       "activityBar.background": "#0d0d0d",
-      "button.background": "#68236D",
-      "button.hoverBackground": "#7A2A80",
-      "progressBar.background": "#A35DB0",
-      "focusBorder": "#A35DB0",
-      "textLink.foreground": "#A35DB0",
-      "textLink.activeForeground": "#B48EAD",
-      "tab.activeBorder": "#A35DB0",
-      "panelTitle.activeBorder": "#A35DB0"
+      "button.background": "#68236d",
+      "button.hoverBackground": "#7a2a80",
+      "progressBar.background": "#a35db0",
+      "focusBorder": "#a35db0",
+      "textLink.foreground": "#a35db0",
+      "textLink.activeForeground": "#b48ead",
+      "tab.activeBorder": "#a35db0",
+      "panelTitle.activeBorder": "#a35db0"
     },
     "tokenColorOverrides": {
-      "constant.numeric": "#A35DB0",
-      "entity.name.type": "#A35DB0",
-      "entity.name.class": "#A35DB0",
-      "support.class": "#A35DB0",
-      "entity.name.function.decorator": "#68236D",
-      "meta.decorator": "#68236D"
+      "constant.numeric": "#a35db0",
+      "entity.name.type": "#a35db0",
+      "entity.name.class": "#a35db0",
+      "support.class": "#a35db0",
+      "entity.name.function.decorator": "#68236d",
+      "meta.decorator": "#68236d"
     },
     "semanticTokenColorOverrides": {
       "type": "#a35db0",

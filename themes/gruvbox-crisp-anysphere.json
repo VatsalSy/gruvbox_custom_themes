@@ -43,7 +43,7 @@
         "constant.language"
       ],
       "settings": {
-        "foreground": "#A35DB0"
+        "foreground": "#a35db0"
       }
     },
     {
@@ -76,7 +76,7 @@
         "variable.language.super.constructor"
       ],
       "settings": {
-        "foreground": "#A35DB0"
+        "foreground": "#a35db0"
       }
     },
     {
@@ -1014,7 +1014,7 @@
   ],
   "colors": {
     "badge.background": "#d65d0e",
-    "button.background": "#68236D",
+    "button.background": "#68236d",
     "dropdown.border": "#3c3836",
     "editor.findMatchBackground": "#fabd2f40",
     "editor.findMatchHighlightBackground": "#d7992140",
@@ -1062,7 +1062,7 @@
     "editorWarning.foreground": "#d79921",
     "editorWhitespace.foreground": "#3c3836",
     "editorWidget.border": "#3c3836",
-    "focusBorder": "#A35DB0",
+    "focusBorder": "#a35db0",
     "foreground": "#fbf1c7",
     "gitDecoration.addedResourceForeground": "#b8bb26",
     "gitDecoration.conflictingResourceForeground": "#d3869b",
@@ -1117,7 +1117,7 @@
     "peekViewTitleLabel.foreground": "#fbf1c7",
     "pickerGroup.border": "#3c3836",
     "pickerGroup.foreground": "#a89984",
-    "progressBar.background": "#A35DB0",
+    "progressBar.background": "#a35db0",
     "scrollbar.shadow": "#1a1a1a",
     "scrollbarSlider.activeBackground": "#7c6f6450",
     "scrollbarSlider.background": "#50494540",
@@ -1191,8 +1191,8 @@
     "textBlockQuote.background": "#3c3836",
     "textBlockQuote.border": "#504945",
     "textCodeBlock.background": "#3c3836",
-    "textLink.activeForeground": "#B48EAD",
-    "textLink.foreground": "#A35DB0",
+    "textLink.activeForeground": "#b48ead",
+    "textLink.foreground": "#a35db0",
     "textPreformat.foreground": "#fabd2f",
     "textSeparator.foreground": "#504945",
     "titleBar.activeForeground": "#fbf1c7",
@@ -1224,7 +1224,7 @@
     "merge.border": "#1a1a1a00",
     "statusBar.debuggingBorder": "#1a1a1a00",
     "statusBar.noFolderBorder": "#1a1a1a00",
-    "button.hoverBackground": "#7A2A80"
+    "button.hoverBackground": "#7a2a80"
   },
   "semanticTokenColors": {
     "constant.builtin": "#d3869b",
