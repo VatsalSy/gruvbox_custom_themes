@@ -4,14 +4,30 @@
     "type": "dark",
     "background": "#32302f",
     "backgroundTransparent": "#32302f00",
-    "fileName": "gruvbox-crisp-soft.json"
+    "fileName": "gruvbox-crisp-soft.json",
+    "additionalColors": {
+      "list.hoverBackground": "#2a2827",
+      "selection.background": "#665c5480",
+      "editor.selectionBackground": "#665c5470",
+      "editor.selectionHighlightBackground": "#7c6f6450",
+      "peekViewResult.selectionBackground": "#665c54",
+      "peekViewEditor.background": "#2a2827"
+    }
   },
   "gruvbox-crisp-medium": {
     "name": "Gruvbox Crisp (Medium, with TeX)",
     "type": "dark",
     "background": "#282828",
     "backgroundTransparent": "#28282800",
-    "fileName": "gruvbox-crisp-medium.json"
+    "fileName": "gruvbox-crisp-medium.json",
+    "additionalColors": {
+      "list.hoverBackground": "#242322",
+      "selection.background": "#665c5480",
+      "editor.selectionBackground": "#665c5470",
+      "editor.selectionHighlightBackground": "#7c6f6450",
+      "peekViewResult.selectionBackground": "#665c54",
+      "peekViewEditor.background": "#242322"
+    }
   },
   "gruvbox-crisp-high-contrast": {
     "name": "Gruvbox Crisp (High Contrast, with TeX)",
@@ -20,7 +36,13 @@
     "backgroundTransparent": "#1d202100",
     "fileName": "gruvbox-crisp-high-contrast.json",
     "additionalColors": {
-      "editorLineNumber.activeForeground": "#fe8019"
+      "editorLineNumber.activeForeground": "#fe8019",
+      "list.hoverBackground": "#1a1a1a",
+      "selection.background": "#7c6f6480",
+      "editor.selectionBackground": "#7c6f6470",
+      "editor.selectionHighlightBackground": "#92837450",
+      "peekViewResult.selectionBackground": "#7c6f64",
+      "peekViewEditor.background": "#1a1a1a"
     }
   },
   "gruvbox-crisp-anysphere": {
@@ -37,7 +59,13 @@
       "progressBar.background": "#a35db0",
       "focusBorder": "#a35db0",
       "textLink.foreground": "#a35db0",
-      "textLink.activeForeground": "#b48ead"
+      "textLink.activeForeground": "#b48ead",
+      "list.hoverBackground": "#222222",
+      "selection.background": "#665c5480",
+      "editor.selectionBackground": "#665c5470",
+      "editor.selectionHighlightBackground": "#7c6f6450",
+      "peekViewResult.selectionBackground": "#665c54",
+      "peekViewEditor.background": "#222222"
     },
     "tokenColorOverrides": {
       "constant.numeric": "#a35db0",
@@ -71,7 +99,13 @@
       "textLink.foreground": "#a35db0",
       "textLink.activeForeground": "#b48ead",
       "tab.activeBorder": "#a35db0",
-      "panelTitle.activeBorder": "#a35db0"
+      "panelTitle.activeBorder": "#a35db0",
+      "list.hoverBackground": "#1f1f1f",
+      "selection.background": "#7c6f6480",
+      "editor.selectionBackground": "#7c6f6470",
+      "editor.selectionHighlightBackground": "#92837450",
+      "peekViewResult.selectionBackground": "#7c6f64",
+      "peekViewEditor.background": "#1f1f1f"
     },
     "tokenColorOverrides": {
       "constant.numeric": "#a35db0",
@@ -110,6 +144,11 @@
 
       "editor.hoverHighlightBackground": "#1a1a1a20",
       "list.hoverBackground": "#1a1a1a",
+      "selection.background": "#bd93f950",
+      "editor.selectionBackground": "#bd93f940",
+      "editor.selectionHighlightBackground": "#bd93f930",
+      "peekViewResult.selectionBackground": "#bd93f960",
+      "peekViewEditor.background": "#1a1a1a",
 
       "focusBorder": "#bd93f9",
       "tab.activeBorder": "#bd93f9",
